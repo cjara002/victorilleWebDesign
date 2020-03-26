@@ -6,11 +6,13 @@ class Portfolio extends React.Component {
   state = {
     darkMode: false,
     technology: [
-      { id: 0, tech: "React" },
-      { id: 1, tech: "Javascript" },
-      { id: 2, tech: "HTML" },
-      { id: 3, tech: "CSS" },
-      { id: 4, tech: "SQL" }
+      { id: 0, tech: "React", image: "https://bit.ly/2QIM7Yo", years: 1 },
+      { id: 1, tech: "Javascript", image: "https://bit.ly/39eEoYk", years: 1 },
+      { id: 2, tech: "HTML", image: "https://bit.ly/39nPDO1", years: 1 },
+      { id: 3, tech: "CSS", image: "https://bit.ly/3bpnLul", years: 1 },
+      { id: 4, tech: "SQL", image: "https://bit.ly/3ajqlCh", years: 1 },
+      { id: 5, tech: "Illustrator", image: "https://bit.ly/2UkI6v6", years: 1 },
+      { id: 6, tech: "Adobe XD", image: "https://bit.ly/39iCbv3", years: 1 }
     ]
   };
 
@@ -114,35 +116,46 @@ class Portfolio extends React.Component {
           <div className="techUsed">
             <div className="container">
               <h1>Technology</h1>
-
               <div className="row">
-                <div className="col-sm-6 col-lg-4">
-                  <div className="row">
-                    <div className="col-12">
-                      <div className="text-center card-body">
-                        <h4 className="text-muted">01</h4>
-                        <h5>REACT</h5>
-                        <img
-                          className=" mb-2 rounded-circle-thumb32"
-                          // src={profile.userImage}
-                          alt="Tech"
-                          id="profilePhoto"
-                        />
-                        {/* <p>{profile.Description}</p> */}
-                       <br/>
-                        <span>Years: 1</span>
-                      </div>
-                      <div className="d-flex card-footer text-center">
-                        <h4>Footer Here</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                
+                
+{this.state.technology.map(tech=> (
+    // <div className="col-sm-6 col-lg-4"> 
+    <div className="col-6">
+    <div className="card-default card" id="boderTech">
+        <div className="row" >
+         <div className="col" >
+           <div className="text-center card-body" >
+             <h4 className="text-muted">{tech.id}</h4>
+             <h5 className="text-uppercase">{tech.tech}</h5>
+             <img
+               className=" mb-2 rounded-circle-thumb32"
+               src={tech.image}
+               alt="Tech"
+               id="techPhoto"
+             />
+             {/* <p>{profile.Description}</p> */}
+             <br />
+             <span>Years: {tech.years}</span>
+           </div>
+           {/* <div className="d-flex card-footer text-center">
+             <h4>Footer Here</h4>
+           </div> */}
+         </div>
+         {/* <div className="col-6">
+          <h1> Hello</h1>
+         </div> */}
+       </div> 
+     </div>
+     <br/>
+    </div>
+
+
+))}          
+</div>
             </div>
           </div>
         </div>
-
       </React.Fragment>
     );
   }

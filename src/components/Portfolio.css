@@ -137,6 +137,7 @@ nav ul a:hover {
   font-family: monospace;
 }
 
+
 .aboutFt {
   text-align: center;
 }
@@ -147,6 +148,19 @@ nav ul a:hover {
   border: solid;
   display: table;
   width: 25%;
+}
+
+.myProjects {
+  background: white;
+  margin-top: 5%;
+  font-family: monospace;
+}
+
+#profilePhoto {
+  display: inline-block ;
+  width: 250px ;
+  border: solid ;
+  border-color: #000088;
 }
 
 .switch {

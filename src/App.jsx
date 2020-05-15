@@ -1,18 +1,17 @@
-import React from 'react';
+import React from "react";
 // import logo from './logo.svg';
-import './App.css';
-import Portfolio from './components/Portfolio'
+import "./App.css";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 class App extends React.Component {
-
-  render () {
-    return(
+  render() {
+    return (
       <React.Fragment>
-    <div className="App">
-    <Portfolio />
-    </div>
+        <div className="App">
+          <Portfolio />
+        </div>
       </React.Fragment>
-    )
+    );
   }
 }
 

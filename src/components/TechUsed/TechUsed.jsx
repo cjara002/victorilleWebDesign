@@ -18,7 +18,7 @@ class TechUsed extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="techUsed">
+        <div className="techUsed" id="techUsed">
           <div className="container">
             <h1>Technology</h1>
             <div className="row">

@@ -3,22 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import "./Portfolio.css";
 
 class HeroBanner extends React.Component {
-  state = {
-    darkMode: false,
-  };
-
-  slider = () => {
-    this.setState((prevState) => ({
-      darkMode: !prevState.darkMode,
-    }));
-  };
-
   render() {
     return (
       <React.Fragment>
-        <div id="EntireBG">
-          {/* <div id="topHead"> */}
-          <nav>
+        {/* <div id="overlay"> */}
+        {/* <div id="topHead"> */}
+        {/* <nav>
             <div className="container">
               <div className="row">
                 <div className="col-md-3">
@@ -35,19 +25,20 @@ class HeroBanner extends React.Component {
                     </label>
                   </ul>
                 </div>
+
                 <div className="col-md-9">
                   <ul className="navButton">
                     <li>
                       {" "}
-                      <a href="k" className="activeButton">
+                      <a href="#about" className="activeButton">
                         About
                       </a>
                     </li>
                     <li>
-                      <a href="k">Technology</a>
+                      <a href="#techUsed">Technology</a>
                     </li>
                     <li>
-                      <a href="k">Projects</a>
+                      <a href="#myProjects">Projects</a>
                     </li>
                     <li>
                       <a href="k">Contact</a>
@@ -56,8 +47,8 @@ class HeroBanner extends React.Component {
                 </div>
               </div>
             </div>
-          </nav>
-          {/* <div id="EntireBG"> */}
+          </nav> */}
+        <div id="EntireBG">
           <div className="row">
             <div className="col" id="heroBanner">
               <h2>Front End Developer</h2>
@@ -83,9 +74,9 @@ class HeroBanner extends React.Component {
                     </label> */}
             </div>
           </div>
-          {/* </div> */}
-          {/* </nav> */}
         </div>
+        {/* </nav> */}
+        {/* </div> */}
       </React.Fragment>
     );
   }

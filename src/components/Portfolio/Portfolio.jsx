@@ -7,17 +7,84 @@ import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Portfolio extends React.Component {
-  state = {};
+  state = {
+    darkMode: false,
+  };
 
+  componentDidMount() {
+    const ColorMode = JSON.parse(localStorage.getItem("darkMode"));
+    if (ColorMode) {
+      this.setDarkMode();
+    } else {
+      localStorage.setItem("darkMode", JSON.stringify(this.state.darkMode));
+    }
+  }
+
+  slider = () => {
+    // debugger;
+    this.setState((prevState) => ({
+      darkMode: !prevState.darkMode,
+    }));
+    localStorage.setItem("darkMode", JSON.stringify(!this.state.darkMode));
+  };
+
+  setDarkMode = () => {
+    const ColorMode = JSON.parse(localStorage.getItem("darkMode"));
+    this.setState(() => ({
+      darkMode: ColorMode,
+    }));
+  };
   render() {
     return (
       <React.Fragment>
-        <div id="overlay">
-          <HeroBanner />
-          <AboutMe />
-          <TechUsed />
-          <Projects />
-        </div>
+        {/* <div id="topHead"> */}
+
+        {/* <div id="overlay"> */}
+        <nav id="navOverEverything">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-3">
+                <ul>
+                  <li>CJ</li>
+
+                  <label htmlFor="" className="switch" onClick={this.slider}>
+                    {this.state.darkMode ? (
+                      <input type="checkbox" checked />
+                    ) : (
+                      <input type="checkbox" />
+                    )}
+                    <span className="slider round"></span>
+                  </label>
+                </ul>
+              </div>
+
+              <div className="col-md-9">
+                <ul className="navButton">
+                  <li>
+                    {" "}
+                    <a href="#about" className="activeButton">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#techUsed">Technology</a>
+                  </li>
+                  <li>
+                    <a href="#myProjects">Projects</a>
+                  </li>
+                  <li>
+                    <a href="k">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <HeroBanner />
+        <AboutMe />
+        <TechUsed />
+        <Projects />
+        {/* </div> */}
       </React.Fragment>
     );
   }

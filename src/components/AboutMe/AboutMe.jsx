@@ -6,7 +6,7 @@ class AboutMe extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="about">
+        <div className="about" id="about">
           <div className="container">
             <div className="row">
               <div className="col-6">

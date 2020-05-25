@@ -45,7 +45,7 @@ class Projects extends React.Component {
     return (
       <React.Fragment>
         {/* Projects */}
-        <div className="myProjects">
+        <div className="myProjects" id="myProjects">
           <h1>Projects</h1>
           <div className="container">
             <div className="row">

@@ -297,3 +297,7 @@ input:checked + .slider:before {
   color: white;
   text-decoration: none;
 }
+
+#navOverEverything {
+  z-index: 2;
+}

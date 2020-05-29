@@ -1,10 +1,11 @@
 .ImperioH {
   text-transform: uppercase !important;
-  color: white !important;
+  /* color: white !important; */
   -webkit-animation: fadein 3s !important;
   animation: fadein 3s;
 }
 
+/* not used */
 #EntireBG {
   background-image: url("https://images.pexels.com/photos/3985394/pexels-photo-3985394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-position: center;
@@ -73,13 +74,13 @@ nav ul a:hover {
 }
 
 #heroBanner h2 {
-  color: white;
+  /* color: white; */
   font-family: cursive;
   -webkit-animation: fadein 3s !important;
   animation: fadein 3s;
 }
 #heroBanner h1 {
-  color: white;
+  /* color: white; */
   font-family: fantasy;
   font-size: 150px;
   letter-spacing: 0.2em !important;
@@ -89,7 +90,7 @@ nav ul a:hover {
 
 #lineBreak {
   margin: auto;
-  color: white;
+  /* color: white; */
   border: solid;
   display: table;
   width: 25%;
@@ -122,14 +123,14 @@ nav ul a:hover {
 
 .techUsed {
   /* background: white; */
-  background-image: url("https://images.pexels.com/photos/4006980/pexels-photo-4006980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=800");
+  /* background-image: url("https://images.pexels.com/photos/4006980/pexels-photo-4006980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=800"); */
   margin-top: 5%;
   font-family: monospace;
-  color: white;
+  /* color: white; */
 }
 
 .about {
-  background: white;
+  /* background: white; */
   margin-top: 5%;
   font-family: monospace;
 }
@@ -147,7 +148,7 @@ nav ul a:hover {
 }
 
 .myProjects {
-  background: white;
+  /* background: white; */
   margin-top: 5%;
   font-family: monospace;
 }
@@ -246,7 +247,7 @@ input:checked + .slider:before {
 }
 
 #testPlus {
-  color: white !important;
+  /* color: white !important; */
   -webkit-animation: fadein 3s !important;
   animation: fadein 3s;
   position: relative;
@@ -300,4 +301,8 @@ input:checked + .slider:before {
 
 #navOverEverything {
   z-index: 2;
+}
+
+#cardBottomBorder {
+  margin-bottom: 2em;
 }

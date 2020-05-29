@@ -45,16 +45,29 @@ class Projects extends React.Component {
     return (
       <React.Fragment>
         {/* Projects */}
-        <div className="myProjects" id="myProjects">
+        <div
+          className="myProjects"
+          id="myProjects"
+          style={{
+            background: `${this.props.backgroundColor}`,
+            color: `${this.props.fontColor}`,
+          }}
+        >
           <h1>Projects</h1>
           <div className="container">
             <div className="row">
               {this.state.project.map((project) => (
                 <div className="col-6" key={project.id}>
-                  <div className="card-default card">
-                    <div className="text-center card-body">
+                  <div className="card-default card" id="cardBottomBorder">
+                    <div
+                      className="text-center card-body"
+                      style={{
+                        background: `${this.props.backgroundColor}`,
+                      }}
+                    >
                       <h2>{project.name}</h2>
                       <span>Technology Used: {project.stack}</span>
+                      <br />
                       <br />
                       <img
                         src={project.image}
@@ -62,7 +75,12 @@ class Projects extends React.Component {
                         id="profilePhoto"
                       />
                     </div>
-                    <div className="card-footer">
+                    <div
+                      className="card-footer"
+                      style={{
+                        background: `${this.props.backgroundColor}`,
+                      }}
+                    >
                       <div
                         className="btn-group btn-group-toggle"
                         data-toggle="buttons"

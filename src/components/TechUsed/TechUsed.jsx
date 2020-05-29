@@ -18,7 +18,14 @@ class TechUsed extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="techUsed" id="techUsed">
+        <div
+          className="techUsed"
+          id="techUsed"
+          style={{
+            backgroundImage: `url(${this.props.backgroundImage})`,
+            color: `${this.props.fontColor}`,
+          }}
+        >
           <div className="container">
             <h1>Technology</h1>
             <div className="row">

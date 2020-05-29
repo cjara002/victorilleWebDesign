@@ -48,9 +48,18 @@ class HeroBanner extends React.Component {
               </div>
             </div>
           </nav> */}
-        <div id="EntireBG">
+        <div
+          style={{
+            backgroundImage: `url(${this.props.backgroundImage})`,
+            backgroundPosition: "center",
+          }}
+        >
           <div className="row">
-            <div className="col" id="heroBanner">
+            <div
+              className="col"
+              id="heroBanner"
+              style={{ color: `${this.props.fontColor}` }}
+            >
               <h2>Front End Developer</h2>
               <span id="lineBreak"></span>
               <h1>CARLOS JARA</h1>

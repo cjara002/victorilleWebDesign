@@ -6,9 +6,13 @@ class AboutMe extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="about" id="about">
+        <div
+          className="about"
+          id="about"
+          style={{ backgroundColor: `${this.props.backgroundColor}` }}
+        >
           <div className="container">
-            <div className="row">
+            <div className="row" style={{ color: `${this.props.fontColor}` }}>
               <div className="col-6">
                 <div className="aboutFt">
                   <h1>WORKING ON PROGRESS</h1>

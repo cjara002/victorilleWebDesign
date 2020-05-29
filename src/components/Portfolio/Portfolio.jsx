@@ -6,6 +6,10 @@ import Projects from "../Projects/Projects";
 import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// const setDarkModeInApp = (props) => {
+//   props.triggerDarkMode(props.this.state.darkMode);
+// };
+
 class Portfolio extends React.Component {
   state = {
     darkMode: false,
@@ -30,9 +34,15 @@ class Portfolio extends React.Component {
 
   setDarkMode = () => {
     const ColorMode = JSON.parse(localStorage.getItem("darkMode"));
-    this.setState(() => ({
-      darkMode: ColorMode,
-    }));
+    this.setState(
+      () => ({
+        darkMode: ColorMode,
+      })
+      // ,
+      // () => {
+      //   setDarkModeInApp(this.state.darkMode);
+      // }
+    );
   };
   render() {
     return (
@@ -47,7 +57,15 @@ class Portfolio extends React.Component {
                 <ul>
                   <li>CJ</li>
 
-                  <label htmlFor="" className="switch" onClick={this.slider}>
+                  <label
+                    htmlFor=""
+                    className="switch"
+                    onClick={this.slider}
+                    data-toggle="tooltip"
+                    title={
+                      this.state.darkMode === true ? "Light Mode" : "Dark Mode"
+                    }
+                  >
                     {this.state.darkMode ? (
                       <input type="checkbox" checked />
                     ) : (
@@ -80,10 +98,30 @@ class Portfolio extends React.Component {
             </div>
           </div>
         </nav>
-        <HeroBanner />
-        <AboutMe />
-        <TechUsed />
-        <Projects />
+        <HeroBanner
+          backgroundImage={
+            this.state.darkMode === true
+              ? "https://bit.ly/3exjLtv"
+              : "https://bit.ly/2MeFTfS"
+          }
+          fontColor={this.state.darkMode === true ? "white" : "black"}
+        />
+        <AboutMe
+          backgroundColor={this.state.darkMode === true ? "black" : "white"}
+          fontColor={this.state.darkMode === true ? "white" : "black"}
+        />
+        <TechUsed
+          backgroundImage={
+            this.state.darkMode === true
+              ? "https://bit.ly/2XfVthC"
+              : "https://bit.ly/2yJf9Ba"
+          }
+          fontColor={this.state.darkMode === true ? "white" : "black"}
+        />
+        <Projects
+          backgroundColor={this.state.darkMode === true ? "black" : "white"}
+          fontColor={this.state.darkMode === true ? "white" : "black"}
+        />
         {/* </div> */}
       </React.Fragment>
     );

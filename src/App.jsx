@@ -4,11 +4,36 @@ import "./App.css";
 import Portfolio from "./components/Portfolio/Portfolio";
 
 class App extends React.Component {
+  state = {
+    darkMode: false,
+  };
+
+  componentDidMount() {
+    const ColorMode = JSON.parse(localStorage.getItem("darkMode"));
+    if (ColorMode) {
+      this.setDarkMode();
+    } else {
+      localStorage.setItem("darkMode", JSON.stringify(this.state.darkMode));
+    }
+  }
+
+  setDarkMode = () => {
+    const ColorMode = JSON.parse(localStorage.getItem("darkMode"));
+    this.setState(() => ({
+      darkMode: ColorMode,
+    }));
+  };
+
   render() {
     return (
       <React.Fragment>
-        <div className="App">
-          <Portfolio />
+        <div
+          className="App"
+          style={{
+            background: `${this.state.darkMode === true ? "black" : "white"}`,
+          }}
+        >
+          <Portfolio triggerDarkMode={this.setDarkMode} />
         </div>
       </React.Fragment>
     );

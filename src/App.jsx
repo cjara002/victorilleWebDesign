@@ -30,7 +30,9 @@ class App extends React.Component {
         <div
           className="App"
           style={{
-            background: `${this.state.darkMode === true ? "black" : "white"}`,
+            backgroundColor: `${
+              this.state.darkMode === true ? "black" : "white"
+            }`,
           }}
         >
           <Portfolio triggerDarkMode={this.setDarkMode} />

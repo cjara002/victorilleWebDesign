@@ -12,6 +12,7 @@ class Projects extends React.Component {
         stack: "React, HTML, CSS, C#, SQL",
         project: "https://imperiotech.azurewebsites.net/",
         code: null,
+        video: "",
       },
       {
         id: 1,
@@ -21,6 +22,8 @@ class Projects extends React.Component {
         project: "https://cjara002.github.io/taskTracker/",
         code: "https://github.com/cjara002/taskTracker",
         GIFs: "https://media.giphy.com/media/mGcOrK9F3RO9CdfK6L/source.mp4",
+        video:
+          "https://www.youtube.com/watch?v=xRKpxHlh3uY&list=PLvzQZBo6Tz-uIF9SPoqN52B6I49r4w5eC",
       },
       {
         id: 2,
@@ -29,6 +32,7 @@ class Projects extends React.Component {
         stack: "HTML, CSS, JavaScript",
         project: "https://cjara002.github.io/JSQuiz/",
         code: "https://github.com/cjara002/JSQuiz",
+        video: "",
       },
       {
         id: 3,
@@ -37,6 +41,7 @@ class Projects extends React.Component {
         stack: "React, HTML, CSS, C#, SQL",
         project: "https://cjara002.github.io/AirBnB.Unique/",
         code: "https://github.com/cjara002/AirBnB.Unique",
+        video: "",
       },
     ],
   };
@@ -117,7 +122,7 @@ class Projects extends React.Component {
                             id="projectA"
                             type="radio"
                             name="options"
-                            href={project.GIFs}
+                            href={project.video}
                           >
                             YOUTUBE
                           </a>

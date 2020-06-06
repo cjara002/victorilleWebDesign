@@ -30,6 +30,7 @@ class Portfolio extends React.Component {
       darkMode: !prevState.darkMode,
     }));
     localStorage.setItem("darkMode", JSON.stringify(!this.state.darkMode));
+    // this.setDarkModeInApp();
   };
 
   setDarkMode = () => {

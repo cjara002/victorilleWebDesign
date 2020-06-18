@@ -12,7 +12,7 @@ class Projects extends React.Component {
         stack: "React, HTML, CSS, C#, SQL",
         project: "https://imperiotech.azurewebsites.net/",
         code: null,
-        video: "",
+        video: "https://www.youtube.com/watch?v=nuJpoidFZRg&list=PLvzQZBo6Tz-s0wj61cuZW_ijhAAl--ir4",
       },
       {
         id: 1,
@@ -21,19 +21,19 @@ class Projects extends React.Component {
         stack: "React, HTML, CSS",
         project: "https://cjara002.github.io/taskTracker/",
         code: "https://github.com/cjara002/taskTracker",
-        GIFs: "https://media.giphy.com/media/mGcOrK9F3RO9CdfK6L/source.mp4",
+        // GIFs: "https://media.giphy.com/media/mGcOrK9F3RO9CdfK6L/source.mp4",
         video:
           "https://www.youtube.com/watch?v=xRKpxHlh3uY&list=PLvzQZBo6Tz-uIF9SPoqN52B6I49r4w5eC",
       },
-      {
-        id: 2,
-        name: "YumWise",
-        image: "https://bit.ly/3bluZQy",
-        stack: "HTML, CSS, JavaScript",
-        project: "https://cjara002.github.io/JSQuiz/",
-        code: "https://github.com/cjara002/JSQuiz",
-        video: "",
-      },
+      // {
+      //   id: 2,
+      //   name: "YumWise",
+      //   image: "https://bit.ly/3bluZQy",
+      //   stack: "HTML, CSS, JavaScript",
+      //   project: "https://cjara002.github.io/JSQuiz/",
+      //   code: "https://github.com/cjara002/JSQuiz",
+      //   video: "",
+      // },
       {
         id: 3,
         name: "AirBnB.Unique",
@@ -41,7 +41,7 @@ class Projects extends React.Component {
         stack: "React, HTML, CSS, C#, SQL",
         project: "https://cjara002.github.io/AirBnB.Unique/",
         code: "https://github.com/cjara002/AirBnB.Unique",
-        video: "",
+        video: null,
       },
     ],
   };
@@ -124,7 +124,7 @@ class Projects extends React.Component {
                             name="options"
                             href={project.video}
                           >
-                            YOUTUBE
+                            {project.video === null ? "N/A" : "YOUTUBE "}
                           </a>
                         </label>
                       </div>

@@ -1,4 +1,5 @@
 import AboutMe from "../AboutMe/AboutMe";
+import ContactForm from "../ContactMe/ContactForm";
 import HeroBanner from "../HeroBanner/HeroBanner";
 import TechUsed from "../TechUsed/TechUsed";
 import React from "react";
@@ -92,7 +93,7 @@ class Portfolio extends React.Component {
                     <a href="#myProjects">Projects</a>
                   </li>
                   <li>
-                    <a href="k">Contact</a>
+                    <a href="#formBorder">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -123,6 +124,7 @@ class Portfolio extends React.Component {
           backgroundColor={this.state.darkMode === true ? "black" : "white"}
           fontColor={this.state.darkMode === true ? "white" : "black"}
         />
+        <ContactForm />
         {/* </div> */}
       </React.Fragment>
     );

@@ -7,10 +7,6 @@ import Projects from "../Projects/Projects";
 import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// const setDarkModeInApp = (props) => {
-//   props.triggerDarkMode(props.this.state.darkMode);
-// };
-
 class Portfolio extends React.Component {
   state = {
     darkMode: false,
@@ -26,12 +22,10 @@ class Portfolio extends React.Component {
   }
 
   slider = () => {
-    // debugger;
     this.setState((prevState) => ({
       darkMode: !prevState.darkMode,
     }));
     localStorage.setItem("darkMode", JSON.stringify(!this.state.darkMode));
-    // this.setDarkModeInApp();
   };
 
   setDarkMode = () => {
@@ -40,18 +34,11 @@ class Portfolio extends React.Component {
       () => ({
         darkMode: ColorMode,
       })
-      // ,
-      // () => {
-      //   setDarkModeInApp(this.state.darkMode);
-      // }
     );
   };
   render() {
     return (
       <React.Fragment>
-        {/* <div id="topHead"> */}
-
-        {/* <div id="overlay"> */}
         <nav id="navOverEverything">
           <div className="container">
             <div className="row">
@@ -125,7 +112,6 @@ class Portfolio extends React.Component {
           fontColor={this.state.darkMode === true ? "white" : "black"}
         />
         <ContactForm />
-        {/* </div> */}
       </React.Fragment>
     );
   }

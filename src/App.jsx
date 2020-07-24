@@ -1,5 +1,4 @@
 import React from "react";
-// import logo from './logo.svg';
 import "./App.css";
 import Portfolio from "./components/Portfolio/Portfolio";
 
@@ -28,12 +27,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <div
-          className="App"
-          style={{
-            backgroundColor: `${
-              this.state.darkMode === true ? "black" : "white"
-            }`,
-          }}
+             className= {this.state.darkMode === true ? "AppDark" : "AppLight"}
         >
           <Portfolio triggerDarkMode={this.setDarkMode} />
         </div>

@@ -93,7 +93,7 @@ class ContactForm extends React.Component {
                   </div>
 
                   <div>
-                   <div dtat-netlify-recaptcha="true">
+                   <div data-netlify-recaptcha="true">
                    </div>
                   </div>
                   <div>

@@ -47,7 +47,8 @@ class ContactForm extends React.Component {
                   action="POST"
                   data-netlify="true"
                   onSubmit={this.handleSubmit}
-                  name="contact"
+                  form-name="contact"
+                  type="hidden"
                 >
                   <div>
                     <label className="formName">

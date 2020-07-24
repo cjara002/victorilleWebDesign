@@ -27,7 +27,7 @@ class ContactForm extends React.Component {
   };
 
   render() {
-    const { name, email, message } = this.state;
+    // const { name, email, message } = this.state;
     return (
       <React.Fragment>
         <div
@@ -44,31 +44,36 @@ class ContactForm extends React.Component {
                 <h1 className="formHeader"> Contact Me</h1>
                 {/* <form name="contact" method="POST" data-netlify="true"> */}
                 <form
-                  action="POST"
-                  data-netlify="true"
-                  onSubmit={this.handleSubmit}
-                  form-name="contact"
-                  type="hidden"
+                  method="POST"
+                  // data-netlify="true"
+                  // onSubmit={this.handleSubmit}
+                  name="contact"
+                  action="/contact"
+                  // type="hidden"
                 >
+                  <input type="hidden" name="form-name" value="contact" />
                   <div>
                     <label className="formName">
                       Your Full Name:{" "}
                       <input
+                        required
                         type="text"
                         name="name"
-                        value={name}
-                        onChange={this.handleChange}
+                        // value={name}
+                        // onChange={this.handleChange}
                       />
                     </label>
                   </div>
+
                   <div>
                     <label className="formEmail">
                       Your Email:{" "}
                       <input
+                        required
                         type="email"
                         name="email"
-                        value={email}
-                        onChange={this.handleChange}
+                        // value={email}
+                        // onChange={this.handleChange}
                       />
                     </label>
                   </div>
@@ -85,17 +90,17 @@ class ContactForm extends React.Component {
                     <label className="formMessage">
                       Message:{" "}
                       <textarea
+                        required
                         name="message"
                         defaultValue={""}
-                        value={message}
-                        onChange={this.handleChange}
+                        // value={message}
+                        // onChange={this.handleChange}
                       />
                     </label>
                   </div>
 
                   <div>
-                   <div data-netlify-recaptcha="true">
-                   </div>
+                    <div data-netlify-recaptcha="true"></div>
                   </div>
                   <div>
                     <button type="submit">Send</button>

@@ -26,6 +26,7 @@ class Portfolio extends React.Component {
       darkMode: !prevState.darkMode,
     }));
     localStorage.setItem("darkMode", JSON.stringify(!this.state.darkMode));
+    console.log("slider:", this.state.darkMode)
   };
 
   setDarkMode = () => {
@@ -44,10 +45,15 @@ class Portfolio extends React.Component {
             <div className="row">
               <div className="col-md-3">
                 <ul>
-                  <li>CJ</li>
-
+                  {/* <li>
+                     CJ 
+                    </li> */}
+                  <li>
+                    <a href="https://www.carlosjaraportfolio.com/"> CJ </a>
+                    </li>
+                    {/* Need to figure out how to tur the circle black once it is clicked. */}
                   <label
-                    htmlFor=""
+                  htmlFor=""
                     className="switch"
                     onClick={this.slider}
                     data-toggle="tooltip"
@@ -62,6 +68,7 @@ class Portfolio extends React.Component {
                     )}
                     <span className="slider round"></span>
                   </label>
+
                 </ul>
               </div>
 
@@ -69,7 +76,7 @@ class Portfolio extends React.Component {
                 <ul className="navButton">
                   <li>
                     {" "}
-                    <a href="#about" className="activeButton">
+                    <a href="#about">
                       About
                     </a>
                   </li>
@@ -95,10 +102,12 @@ class Portfolio extends React.Component {
           }
           fontColor={this.state.darkMode === true ? "white" : "black"}
         />
+
         <AboutMe
           backgroundColor={this.state.darkMode === true ? "black" : "white"}
           fontColor={this.state.darkMode === true ? "white" : "black"}
         />
+
         <TechUsed
           backgroundImage={
             this.state.darkMode === true
@@ -107,10 +116,12 @@ class Portfolio extends React.Component {
           }
           fontColor={this.state.darkMode === true ? "white" : "black"}
         />
+
         <Projects
           backgroundColor={this.state.darkMode === true ? "black" : "white"}
           fontColor={this.state.darkMode === true ? "white" : "black"}
         />
+        
         <ContactForm />
       </React.Fragment>
     );

@@ -19,8 +19,9 @@ nav ul {
   font-weight: bold;
   -webkit-animation: fadein 3s !important;
   animation: fadein 3s;
-  /* display: flex; */
 }
+
+
 nav ul li {
   display: inline-block;
   padding: 10px;
@@ -48,16 +49,76 @@ nav ul a::after {
   height: 5px;
   content: "";
   transition: 0.5s;
-  /* text-decoration: none; */
 }
 nav ul a:hover::after {
   width: 100%;
-  /* text-decoration: none; */
 }
 
 nav ul a:hover {
   color: #000088;
   text-decoration: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  -webkit-animation: fadein 3s !important;
+  animation: fadein 3s;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 8px;
+  bottom: 8px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: white;
+  color: black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /* ========================================================================
@@ -171,66 +232,7 @@ Nav Bar End
   border-color: #000088;
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  -webkit-animation: fadein 3s !important;
-  animation: fadein 3s;
-}
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(168, 167, 167);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: black;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px black;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
 
 #sloganContainer em,
 #sloganContainer h4 {
@@ -324,4 +326,33 @@ Nav Bar Start
     width: 100%;
     height: 30px;
   }
+
+  nav ul {
+    font-size: small;
+  }
+
+  nav ul li {
+    padding: 5px;
+  }
+
+  nav ul a {
+    padding: 5px;
+    font-size: small;
+  }
+
+  .switch {
+    width: 38px;
+    height: 15px;
+  }
+
+  .slider:before {
+    height: 8px;
+    width: 8px;
+    left: 4px;
+    bottom: 4px; 
+  }
+
+  /* ========================================================================
+Nav Bar End
+ ========================================================================== */
 }

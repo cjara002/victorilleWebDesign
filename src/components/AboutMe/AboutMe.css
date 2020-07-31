@@ -1,0 +1,48 @@
+.about {
+    margin-top: 5%;
+    font-family: monospace;
+  }
+  
+  .aboutFt {
+    text-align: center;
+  }
+  
+
+  #verticalLine {
+    border-left: solid #000088;
+  }
+  
+  #emphasis {
+    font-size: 40px !important;
+    font: bold;
+    color: #000088;
+  }
+
+  #verticalLine p{
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    /* ========================================================================
+AboutMe Start
+   ========================================================================== */
+   .aboutFt h1 {
+    font-size: 1 rem
+  }
+   .aboutFt h2 {
+    font-size: .5 rem
+  }
+
+  #emphasis {
+    font-size: 20px !important;
+  }
+
+  #verticalLine p{
+    font-size: .7rem;
+  }
+  
+    /* ========================================================================
+AboutMe  End
+   ========================================================================== */
+  }
+  

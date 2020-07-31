@@ -1,5 +1,5 @@
 /* ========================================================================
-Nav Bar Start
+Portfolio Nav Bar Start
  ========================================================================== */
  #navOverEverything {
   z-index: 2;
@@ -122,53 +122,8 @@ input:checked + .slider:before {
 }
 
 /* ========================================================================
-Nav Bar End
+Portfolio Nav Bar End
  ========================================================================== */
-.ImperioH {
-  text-transform: uppercase !important;
-  /* color: white !important; */
-  -webkit-animation: fadein 3s !important;
-  animation: fadein 3s;
-}
-
-/* not used */
-#EntireBG {
-  background-image: url("https://images.pexels.com/photos/3985394/pexels-photo-3985394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-position: center;
-}
-
-
-
-#heroBanner {
-  text-align: center;
-  margin-top: 10%;
-  margin-bottom: 20%;
-}
-
-#heroBanner h2 {
-  /* color: white; */
-  font-family: cursive;
-  -webkit-animation: fadein 3s !important;
-  animation: fadein 3s;
-}
-#heroBanner h1 {
-  /* color: white; */
-  font-family: fantasy;
-  font-size: 150px;
-  letter-spacing: 0.2em !important;
-  -webkit-animation: fadein 3s !important;
-  animation: fadein 3s;
-}
-
-#lineBreak {
-  margin: auto;
-  /* color: white; */
-  border: solid;
-  display: table;
-  width: 25%;
-  -webkit-animation: fadein 3s !important;
-  animation: fadein 3s;
-}
 
 /* button outline has to be white */
 #learn {
@@ -201,23 +156,7 @@ Nav Bar End
   /* color: white; */
 }
 
-.about {
-  /* background: white; */
-  margin-top: 5%;
-  font-family: monospace;
-}
 
-.aboutFt {
-  text-align: center;
-}
-
-.aboutFT #lineBreak {
-  margin: auto;
-  color: orangered;
-  border: solid;
-  display: table;
-  width: 25%;
-}
 
 .myProjects {
   /* background: white; */
@@ -234,13 +173,7 @@ Nav Bar End
 
 
 
-#sloganContainer em,
-#sloganContainer h4 {
-  display: inline;
-  vertical-align: top;
-  font-size: 16px;
-  line-height: 28px;
-}
+
 
 @keyframes fadein {
   from {
@@ -259,22 +192,9 @@ Nav Bar End
   }
 }
 
-#testPlus {
-  /* color: white !important; */
-  -webkit-animation: fadein 3s !important;
-  animation: fadein 3s;
-  position: relative;
-}
 
-#verticalLine {
-  border-left: solid #000088;
-}
 
-#emphasis {
-  font-size: 20px;
-  font: bold;
-  color: #000088;
-}
+
 
 #techPhoto {
   /* display: inline-block ; */
@@ -320,7 +240,7 @@ Nav Bar End
 
 @media (max-width: 600px) {
   /* ========================================================================
-Nav Bar Start
+Portfolio Nav Bar Start
  ========================================================================== */
   nav {
     width: 100%;
@@ -353,6 +273,6 @@ Nav Bar Start
   }
 
   /* ========================================================================
-Nav Bar End
+Portfolio Nav Bar End
  ========================================================================== */
 }

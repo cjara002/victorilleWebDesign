@@ -27,23 +27,18 @@ class ContactForm extends React.Component {
   };
 
   render() {
-    // const { name, email, message } = this.state;
     return (
       <React.Fragment>
         <div
          style={{
           backgroundImage: `url(https://images.pexels.com/photos/4983203/pexels-photo-4983203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
           backgroundPosition: "center",
-          // backgroundRepeat: "no-repeat"
         }}>
-          {/* <div
-            id="formBorder"
-          > */}
                   <h1 className="formHeader"> Contact Me</h1>
                   
                   <ul>
                   <li className="iconSocial">
-                    <a href="https://github.com/cjara002">
+                    <a href="https://github.com/cjara002" data-toggle="tooltip" title="GitHub">
                       <img
                         src={Github}
                         className="img-responsive"
@@ -53,7 +48,7 @@ class ContactForm extends React.Component {
                     </a>
                   </li>
                   <li className="iconSocial">
-                    <a href="www.linkedin.com/in/carlos-j-jara">
+                    <a href="www.linkedin.com/in/carlos-j-jara" data-toggle="tooltip" title="LinkedIn">
                       <img
                         src={LinkedIn}
                         className="img-responsive"

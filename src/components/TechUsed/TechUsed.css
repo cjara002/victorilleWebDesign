@@ -1,0 +1,33 @@
+.techUsed {
+    margin-top: 5%;
+    font-family: monospace;
+  }
+
+  #borderTech {
+    background-color: rgb(0, 0, 136, 0.5);
+    border-radius: 50px;
+  }
+
+  #techPhoto {
+    height: 90px;
+    border-radius: 500px;
+    background-color: white;
+    border: solid;
+    border-color: orange;
+  }
+
+/* #techPhoto:hover {
+  height: 90px ;
+  border-radius: 500px ;
+  margin: 0 0.5em ;
+  background-color: transparent ;
+  border: solid ;
+  border-color: #000088;
+  filter: none;
+}  */
+
+  @media (max-width: 600px) {
+    #techTitle {
+        font-size: .9rem;
+    }
+  }

@@ -148,28 +148,11 @@ Portfolio Nav Bar End
   left: 0;
 }
 
-.techUsed {
-  /* background: white; */
-  /* background-image: url("https://images.pexels.com/photos/4006980/pexels-photo-4006980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=800"); */
-  margin-top: 5%;
-  font-family: monospace;
-  /* color: white; */
-}
 
 
 
-.myProjects {
-  /* background: white; */
-  margin-top: 5%;
-  font-family: monospace;
-}
 
-#profilePhoto {
-  display: inline-block;
-  width: 250px;
-  border: solid;
-  border-color: #000088;
-}
+
 
 
 
@@ -196,47 +179,16 @@ Portfolio Nav Bar End
 
 
 
-#techPhoto {
-  /* display: inline-block ; */
-  /* width: 7px ; */
-  height: 90px;
-  border-radius: 500px;
-  margin: 0 0.5em;
-  background-color: white;
-  /* vertical-align: baseline ; */
-  border: solid;
-  border-color: orange;
-  /* filter: grayscale(100%); */
-}
-/* #techPhoto:hover {
-  height: 90px ;
-  border-radius: 500px ;
-  margin: 0 0.5em ;
-  background-color: transparent ;
-  border: solid ;
-  border-color: #000088;
-  filter: none;
-} */
-
-#boderTech {
-  background-color: rgb(0, 0, 136, 0.5);
-  border-radius: 50px;
-}
-
-#projectA {
-  /* display: inline-block;
-    padding: 10px;
-    font-size: medium;
-    /* position: relative; */
-  color: white;
-  text-decoration: none;
-}
 
 
 
-#cardBottomBorder {
-  margin-bottom: 2em;
-}
+
+
+
+
+
+
+
 
 @media (max-width: 600px) {
   /* ========================================================================

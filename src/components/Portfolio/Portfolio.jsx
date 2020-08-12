@@ -1,9 +1,9 @@
 import AboutMe from "../AboutMe/AboutMe";
 import ContactForm from "../ContactMe/ContactForm";
 import HeroBanner from "../HeroBanner/HeroBanner";
-import TechUsed from "../TechUsed/TechUsed";
+import TechUsed from "../TechUsed/TechUsed.jsx";
 import React from "react";
-import Projects from "../Projects/Projects";
+import Projects from "../Projects/Projects.jsx";
 import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -26,16 +26,14 @@ class Portfolio extends React.Component {
       darkMode: !prevState.darkMode,
     }));
     localStorage.setItem("darkMode", JSON.stringify(!this.state.darkMode));
-    console.log("slider:", this.state.darkMode)
+    console.log("slider:", this.state.darkMode);
   };
 
   setDarkMode = () => {
     const ColorMode = JSON.parse(localStorage.getItem("darkMode"));
-    this.setState(
-      () => ({
-        darkMode: ColorMode,
-      })
-    );
+    this.setState(() => ({
+      darkMode: ColorMode,
+    }));
   };
   render() {
     return (
@@ -50,10 +48,10 @@ class Portfolio extends React.Component {
                     </li> */}
                   <li>
                     <a href="https://www.carlosjaraportfolio.com/"> CJ </a>
-                    </li>
-                    {/* Need to figure out how to tur the circle black once it is clicked. */}
+                  </li>
+                  {/* Need to figure out how to tur the circle black once it is clicked. */}
                   <label
-                  htmlFor=""
+                    htmlFor=""
                     className="switch"
                     onClick={this.slider}
                     data-toggle="tooltip"
@@ -68,7 +66,6 @@ class Portfolio extends React.Component {
                     )}
                     <span className="slider round"></span>
                   </label>
-
                 </ul>
               </div>
 
@@ -76,9 +73,7 @@ class Portfolio extends React.Component {
                 <ul className="navButton">
                   <li>
                     {" "}
-                    <a href="#about">
-                      About
-                    </a>
+                    <a href="#about">About</a>
                   </li>
                   <li>
                     <a href="#techUsed">Technology</a>
@@ -115,14 +110,14 @@ class Portfolio extends React.Component {
               : "https://bit.ly/2yJf9Ba"
           }
           fontColor={this.state.darkMode === true ? "white" : "black"}
-        />
+        /> 
 
         <Projects
           backgroundColor={this.state.darkMode === true ? "black" : "white"}
           fontColor={this.state.darkMode === true ? "white" : "black"}
         />
-        
-        <ContactForm />
+
+        <ContactForm /> 
       </React.Fragment>
     );
   }

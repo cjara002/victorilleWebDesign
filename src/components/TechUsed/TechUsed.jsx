@@ -1,17 +1,16 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "./Portfolio.css";
-import Technology from "./Technology";
-import "./TechUsed.css"
+import expierence from "./Technology";
+import "./TechUsed.css";
 
 class TechUsed extends React.Component {
   state = {
-    techUsed: []
+    techUsed: [ ],
   };
 
   componentDidMount() {
     this.setState(() => ({
-      techUsed: Technology
+      techUsed: expierence
     }));
     }
 
@@ -37,7 +36,9 @@ class TechUsed extends React.Component {
                       <div className="col">
                         <div className="text-center card-body">
                           <h4 className="text-muted">{tech.id}</h4>
-                          <h5 className="text-uppercase" id="techTitle">{tech.tech}</h5>
+                          <h5 className="text-uppercase" id="techTitle">
+                            {tech.tech}
+                          </h5>
                           <img
                             className=" mb-2 rounded-circle-thumb32"
                             src={tech.image}

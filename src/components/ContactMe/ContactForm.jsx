@@ -31,9 +31,12 @@ class ContactForm extends React.Component {
       <React.Fragment>
         <div
          style={{
-          backgroundImage: `url(https://images.pexels.com/photos/4983203/pexels-photo-4983203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+          backgroundImage: `url(https://images.pexels.com/photos/821754/pexels-photo-821754.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
           backgroundPosition: "center",
-        }}>
+         
+        }}
+        id="contactBorder"
+        >
                   <h1 className="formHeader"> Contact Me</h1>
                   
                   <ul>
@@ -58,18 +61,15 @@ class ContactForm extends React.Component {
                     </a>
                   </li>
                 </ul>
+
             <div className="row block-center mt-4 " id="formBorder">
               <div className="col">
                 <div className="container" id="formContainer">
-                  {/* <form name="contact" method="POST" data-netlify="true"> */}
                   <form
                     method="POST"
-                    // data-netlify="true"
-                    // onSubmit={this.handleSubmit}
                     name="contact"
                     action="/contact"
                     id="formContact"
-                    // type="hidden"
                   >
                     <input type="hidden" name="form-name" value="contact" />
                     <div>
@@ -79,8 +79,6 @@ class ContactForm extends React.Component {
                           required
                           type="text"
                           name="name"
-                          // value={name}
-                          // onChange={this.handleChange}
                         />
                       </label>
                     </div>
@@ -92,20 +90,9 @@ class ContactForm extends React.Component {
                           required
                           type="email"
                           name="email"
-                          // value={email}
-                          // onChange={this.handleChange}
                         />
                       </label>
                     </div>
-                    {/* <p>
-                              <label>
-                                Your Role:{" "}
-                                <select name="role[]" multiple>
-                                  <option value="leader">Leader</option>
-                                  <option value="follower">Follower</option>
-                                </select>
-                              </label>
-                            </p> */}
                     <div>
                       <label className="formMessage">
                         Message:{" "}
@@ -113,8 +100,6 @@ class ContactForm extends React.Component {
                           required
                           name="message"
                           defaultValue={""}
-                          // value={message}
-                          // onChange={this.handleChange}
                         />
                       </label>
                     </div>
@@ -129,32 +114,11 @@ class ContactForm extends React.Component {
                 </div>
               </div>
   
-              {/* <div className="col-6">
-                <ul>
-                  <li className="iconSocial">
-                    <a href="https://github.com/cjara002">
-                      <img
-                        src={Github}
-                        className="img-responsive"
-                        alt="github"
-                        id="imageSocial"
-                      ></img>
-                    </a>
-                  </li>
-                  <li className="iconSocial">
-                    <a href="www.linkedin.com/in/carlos-j-jara">
-                      <img
-                        src={LinkedIn}
-                        className="img-responsive"
-                        alt="linkedin"
-                        id="imageSocial"
-                      ></img>
-                    </a>
-                  </li>
-                </ul>
-              </div> */}
+        
             </div>
           </div>
+
+
         {/* </div> */}
       </React.Fragment>
     );

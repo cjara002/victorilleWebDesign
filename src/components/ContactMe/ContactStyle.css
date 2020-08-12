@@ -3,6 +3,11 @@
    padding: 1rem;
 }
 
+#contactBorder {
+  padding: 2rem;
+  /* margin-bottom: 1rem; */
+}
+
 .formHeader, .formName, .formEmail, .formMessage {
     color: white;
 }
@@ -25,3 +30,12 @@
   .iconSocial:hover {
     background: #000088;
   }
+
+  @media (max-width: 600px) {
+
+    #contactBorder {
+      padding: 1rem;
+      /* margin-bottom: 1rem; */
+    }
+  }
+  

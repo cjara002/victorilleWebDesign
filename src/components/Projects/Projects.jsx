@@ -7,7 +7,7 @@ import Fade from "react-reveal/Fade";
 class Projects extends React.Component {
   state = {
     groupProps: {
-      appear: true,
+      appear: false,
       enter: true,
       exit: true,
     },
@@ -44,11 +44,6 @@ class Projects extends React.Component {
     ]
   };
 
-  // componentDidMount(){
-  //   this.setState(() => ({
-  //     project: expierence
-  //   }));
-  // }
 
   render() {
     return (
@@ -65,9 +60,10 @@ class Projects extends React.Component {
           <div className="container">
             <div className="row">
               <TransitionGroup {...this.state.groupProps}>
+              
               {this.state.project.map((project) => (
-                <Fade key={project.id}>
-                <div className="col-6" >
+                  <Fade key={project.id}> 
+                <div className="col" >
                   <div className="card-default card" id="cardBottomBorder">
                     <div
                       className="text-center card-body"

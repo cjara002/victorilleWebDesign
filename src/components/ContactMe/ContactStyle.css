@@ -1,41 +1,46 @@
 #formContact {
-   /* margin: 10px;  */
-   padding: 1rem;
+  /* margin: 10px;  */
+  padding: 1rem;
 }
 
 #contactBorder {
   padding: 2rem;
-  /* margin-bottom: 1rem; */
+
+  /* height: 100%; */
 }
 
-.formHeader, .formName, .formEmail, .formMessage {
-    color: white;
+.formHeader,
+.formName,
+.formEmail,
+.formMessage, 
+.formNumber
+{
+  color: white;
 }
 
 #formContainer {
-    border: solid;
-    border-color: white;
-    background-color: rgb(0, 0, 0, .4);
+  border: solid;
+  border-color: white;
+  background-color: rgb(0, 0, 0, .7);
 }
 
 .iconSocial {
-    display: inline-block;
-    padding: 10px;
-    margin: 10px;
-    background-color: white;
-    border-radius: 50%;
-    text-decoration: none;
-  }
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 50%;
+  text-decoration: none;
+}
 
-  .iconSocial:hover {
-    background: #000088;
-  }
+.iconSocial:hover {
+  background: #000088;
+}
 
-  @media (max-width: 600px) {
-
-    #contactBorder {
-      padding: 1rem;
-      /* margin-bottom: 1rem; */
-    }
-  }
+@media (max-width: 600px) {
+  #contactBorder {
+    padding: 1rem;
   
+    /* margin-bottom: 1rem; */
+  }
+}

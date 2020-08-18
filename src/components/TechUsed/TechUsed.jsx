@@ -35,16 +35,16 @@ class TechUsed extends React.Component {
                     <div className="row">
                       <div className="col">
                         <div className="text-center card-body">
-                          <h4 className="text-muted">{tech.id}</h4>
-                          <h5 className="text-uppercase" id="techTitle">
-                            {tech.tech}
-                          </h5>
                           <img
                             className=" mb-2 rounded-circle-thumb32"
                             src={tech.image}
                             alt="Tech"
                             id="techPhoto"
                           />
+                          <h5 className="text-uppercase" id="techTitle">
+                            {tech.tech}
+                          </h5>
+                          <h4 className="text-muted">{tech.id}</h4>
                         </div>
                       </div>
                     </div>

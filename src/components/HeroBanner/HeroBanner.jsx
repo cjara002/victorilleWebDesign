@@ -9,12 +9,13 @@ class HeroBanner extends React.Component {
         <div
           style={{
             backgroundImage: `url(${this.props.backgroundImage})`,
-            backgroundPosition: "center",
+            backgroundPosition: "right",
           }}
         >
           <div className="row">
+          <div className="col-6"></div>
             <div
-              className="col"
+              className="col-6"
               id="heroBanner"
               style={{ color: `${this.props.fontColor}` }}
             >

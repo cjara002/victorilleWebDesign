@@ -1,8 +1,9 @@
 import React from "react";
 import "./ContactStyle.css";
-// import {Form, FormGroup, Label, Button} from "reactstrap"
+import { Button} from "reactstrap"
 import Github from "./Github.png";
 import LinkedIn from "./LinkedIn.png";
+import Fade from "react-reveal/Fade";
 
 class ContactForm extends React.Component {
   state = {
@@ -37,6 +38,7 @@ class ContactForm extends React.Component {
         }}
         id="contactBorder"
         >
+
                   <h1 className="formHeader"> Contact Me</h1>
                   
                   <ul>
@@ -62,61 +64,73 @@ class ContactForm extends React.Component {
                   </li>
                 </ul>
 
-            <div className="row block-center mt-4 " id="formBorder">
-              <div className="col">
-                <div className="container" id="formContainer">
-                  <form
-                    method="POST"
-                    name="contact"
-                    action="/contact"
-                    id="formContact"
-                  >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <div>
-                      <label className="formName">
-                        Your Full Name:{" "}
-                        <input
-                          required
-                          type="text"
-                          name="name"
-                        />
-                      </label>
-                    </div>
-  
-                    <div>
-                      <label className="formEmail">
-                        Your Email:{" "}
-                        <input
-                          required
-                          type="email"
-                          name="email"
-                        />
-                      </label>
-                    </div>
-                    <div>
-                      <label className="formMessage">
-                        Message:{" "}
-                        <textarea
-                          required
-                          name="message"
-                          defaultValue={""}
-                        />
-                      </label>
-                    </div>
-  
-                    <div>
-                      <div data-netlify-recaptcha="true"></div>
-                    </div>
-                    <div>
-                      <button type="submit">Send</button>
-                    </div>
-                  </form>
+           <Fade bottom> 
+              <div className="row block-center mt-4 " id="formBorder">
+                <div className="col">
+                  <div className="container" id="formContainer">
+                    <form
+                      method="POST"
+                      name="contact"
+                      action="/contact"
+                      id="formContact"
+                    >
+                      <input type="hidden" name="form-name" value="contact" />
+                      <div>
+                        <label className="formName">
+                          Name:{" "}
+                          <input
+                            required
+                            type="text"
+                            name="name"
+                          />
+                        </label>
+                      </div>
+    
+                      <div>
+                        <label className="formEmail">
+                          Email:{" "}
+                          <input
+                            required
+                            type="email"
+                            name="email"
+                          />
+                        </label>
+                      </div>
+                      <div>
+                        <label className="formNumber">
+                          Phone Number:{" "}
+                          <input
+                            type="text"
+                            name="number"
+                          />
+                        </label>
+                      </div>
+                      <div>
+                        <label className="formMessage">
+                          Message:{" "}
+                          <textarea
+                            required
+                            name="message"
+                            defaultValue={""}
+                          />
+                        </label>
+                      </div>
+    
+                      <div>
+                        <div data-netlify-recaptcha="true"></div>
+                      </div>
+                      <div>
+                        <Button color="secondary" type="submit">Send</Button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-              </div>
-  
+    
         
+              </div>
+                 </Fade> 
             </div>
-          </div>
+          
 
 
         {/* </div> */}

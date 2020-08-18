@@ -1,10 +1,16 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Projects.css";
-// import { expierence } from "./Projects";
+import TransitionGroup from "react-transition-group/TransitionGroup";
+import Fade from "react-reveal/Fade";
 
 class Projects extends React.Component {
   state = {
+    groupProps: {
+      appear: true,
+      enter: true,
+      exit: true,
+    },
     project: [
       {
         id: 0,
@@ -55,11 +61,13 @@ class Projects extends React.Component {
             color: `${this.props.fontColor}`,
           }}
         >
-          <h1>Projects</h1>
+          <h1>Recent Work</h1>
           <div className="container">
             <div className="row">
+              <TransitionGroup {...this.state.groupProps}>
               {this.state.project.map((project) => (
-                <div className="col-6" key={project.id}>
+                <Fade key={project.id}>
+                <div className="col-6" >
                   <div className="card-default card" id="cardBottomBorder">
                     <div
                       className="text-center card-body"
@@ -126,7 +134,9 @@ class Projects extends React.Component {
                     </div>
                   </div>
                 </div>
+                </Fade>
               ))}
+              </TransitionGroup>
             </div>
           </div>
         </div>

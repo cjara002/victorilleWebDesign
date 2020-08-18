@@ -50,22 +50,6 @@ class Portfolio extends React.Component {
                     <a href="https://www.carlosjaraportfolio.com/"> CJ </a>
                   </li>
                   {/* Need to figure out how to tur the circle black once it is clicked. */}
-                  <label
-                    htmlFor=""
-                    className="switch"
-                    onClick={this.slider}
-                    data-toggle="tooltip"
-                    title={
-                      this.state.darkMode === true ? "Light Mode" : "Dark Mode"
-                    }
-                  >
-                    {this.state.darkMode ? (
-                      <input type="checkbox" checked />
-                    ) : (
-                      <input type="checkbox" />
-                    )}
-                    <span className="slider round"></span>
-                  </label>
                 </ul>
               </div>
 
@@ -74,12 +58,13 @@ class Portfolio extends React.Component {
                   <li>
                     {" "}
                     <a href="#about">About</a>
+                    {/* {window.screen.height < 600 ? <a href="#about">short </a>: <a href="#about">About</a>} */}
                   </li>
                   <li>
                     <a href="#techUsed">Technology</a>
                   </li>
                   <li>
-                    <a href="#myProjects">Projects</a>
+                    <a href="#myProjects">Recent Work</a>
                   </li>
                   <li>
                     <a href="#formBorder">Contact</a>
@@ -109,7 +94,7 @@ class Portfolio extends React.Component {
               ? "https://bit.ly/2XfVthC"
               : "https://bit.ly/2yJf9Ba"
           }
-          fontColor={this.state.darkMode === true ? "white" : "black"}
+          fontColor={this.state.darkMode === true ? "white" : "white"}
         /> 
 
         <Projects

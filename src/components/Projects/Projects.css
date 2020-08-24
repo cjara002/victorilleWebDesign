@@ -1,8 +1,13 @@
 
 .myProjects {
     margin-top: 5%;
+    padding-top: 5%;
     font-family: monospace;
   }
+
+/* #myProjects {
+  padding: 4%;
+  } */
 
   #cardBottomBorder {
     margin-bottom: 2em;

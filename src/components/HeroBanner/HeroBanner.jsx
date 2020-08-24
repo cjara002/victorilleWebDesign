@@ -19,8 +19,8 @@ class HeroBanner extends React.Component {
               id="heroBanner"
               style={{ color: `${this.props.fontColor}` }}
             >
-              <h2>Front End Developer</h2>
-              <span id="lineBreak"></span>
+              {/* <h2>Front End Developer</h2>
+              <span id="lineBreak"></span> */}
               <h1>CARLOS JARA</h1>
               <br />
               <div id="heroValuesContainer">

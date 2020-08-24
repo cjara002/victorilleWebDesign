@@ -44,7 +44,7 @@ class TechUsed extends React.Component {
                           <h5 className="text-uppercase" id="techTitle">
                             {tech.tech}
                           </h5>
-                          <h4 className="text-muted">{tech.id}</h4>
+                          {/* <h4 className="text-muted">{tech.id}</h4> */}
                         </div>
                       </div>
                     </div>

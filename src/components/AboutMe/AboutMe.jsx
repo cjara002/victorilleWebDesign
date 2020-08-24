@@ -26,11 +26,12 @@ class AboutMe extends React.Component {
               <Zoom left>
                 <p>
                   <span id="emphasis">I</span> started my career in the medical
-                  insurace field providing support to patients abroad and
+                  field providing support to patients abroad and
                   domestically. During that time, I saw the gap that technology
-                  would bridge. Technology provides long term solutions to real
-                  world problems. I also bring with me my love for art and
-                  design. Web Developmet brings both art and critically thiking
+                   bridged. Technology provides long term solutions to real
+                  world problems.
+                  I also bring with me my love for art and
+                  design. Web Development brings both art and critically thinking
                   into one field.
                 </p>
                 </Zoom>

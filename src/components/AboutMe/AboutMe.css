@@ -1,5 +1,6 @@
 .about {
     margin-top: 5%;
+    padding-top: 5%;
     font-family: monospace;
   }
   
@@ -13,7 +14,7 @@
   }
   
   #emphasis {
-    font-size: 40px !important;
+    font-size: 20px;
     font: bold;
     color: #000088;
   }
@@ -21,6 +22,10 @@
   #verticalLine p{
     font-size: 1rem;
   }
+
+  /* #about {
+    padding: 4%;
+  } */
 
   @media (max-width: 600px) {
     /* ========================================================================
@@ -40,6 +45,8 @@ AboutMe Start
   #verticalLine p{
     font-size: .7rem;
   }
+
+
   
     /* ========================================================================
 AboutMe  End

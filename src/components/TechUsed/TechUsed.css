@@ -1,7 +1,11 @@
 .techUsed {
     margin-top: 5%;
+    padding-top: 5%;
     font-family: monospace;
   }
+/* #techUsed {
+    padding: 4%;
+  } */
 
   #borderTech {
     background-color: rgb(0, 0, 136, 0.5);

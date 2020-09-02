@@ -31,42 +31,48 @@ class ContactForm extends React.Component {
     return (
       <React.Fragment>
         <div
-         style={{
-          backgroundImage: `url(https://images.pexels.com/photos/821754/pexels-photo-821754.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
-          backgroundPosition: "center",
-         
-        }}
-        id="contactBorder"
+          style={{
+            backgroundImage: `url(https://images.pexels.com/photos/821754/pexels-photo-821754.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+            backgroundPosition: "center",
+          }}
+          id="contactBorder"
         >
+          <h1 className="formHeader"> Contact Me</h1>
 
-                  <h1 className="formHeader"> Contact Me</h1>
-                  
-                  <ul>
-                  <li className="iconSocial">
-                    <a href="https://github.com/cjara002" data-toggle="tooltip" title="GitHub">
-                      <img
-                        src={Github}
-                        className="img-responsive"
-                        alt="github"
-                        id="imageSocial"
-                      ></img>
-                    </a>
-                  </li>
-                  <li className="iconSocial">
-                    <a href="www.linkedin.com/in/carlos-j-jara" data-toggle="tooltip" title="LinkedIn">
-                      <img
-                        src={LinkedIn}
-                        className="img-responsive"
-                        alt="linkedin"
-                        id="imageSocial"
-                      ></img>
-                    </a>
-                  </li>
-                </ul>
+          <ul>
+            <li className="iconSocial">
+              <a
+                href="https://github.com/cjara002"
+                data-toggle="tooltip"
+                title="GitHub"
+              >
+                <img
+                  src={Github}
+                  className="img-responsive"
+                  alt="github"
+                  id="imageSocial"
+                ></img>
+              </a>
+            </li>
+            <li className="iconSocial">
+              <a
+                href="www.linkedin.com/in/carlos-j-jara"
+                data-toggle="tooltip"
+                title="LinkedIn"
+              >
+                <img
+                  src={LinkedIn}
+                  className="img-responsive"
+                  alt="linkedin"
+                  id="imageSocial"
+                ></img>
+              </a>
+            </li>
+          </ul>
 
-           <Fade bottom> 
-              <div className="row block-center mt-4 " id="formBorder">
-                <div className="col">
+          <Fade bottom>
+            <div className="row block-center mt-4 " id="formBorder">
+              {/* <div className="col">
                   <div className="container" id="formContainer">
                     <form
                       method="POST"
@@ -124,14 +130,81 @@ class ContactForm extends React.Component {
                       </div>
                     </form>
                   </div>
-                </div>
-    
-        
-              </div>
-                 </Fade> 
-            </div>
-          
+                </div> */}
+                <div className="col-6">
+              <div className="card-default card" id="formContainer">
+                {/* <div className="card-header">Stacked form</div> */}
+                <div className="card-body" >
+                  <form
+                  method="POST"
+                  name="contact"
+                  action="/contact"
+                  id="formContact"
+                  >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div className="position-relative form-group">
+                      <label className="formName">First Name</label>
+                      <input
+                        // placeholder="Enter email"
+                        required
+                        type="text"
+                        className="form-control-rounded form-control"
+                        name="firstName"
+                      />
+                    </div>
+                    <div className="position-relative form-group">
+                      <label className="formName">Last Name</label>
+                      <input
+                      required
+                        // placeholder="Enter email"
+                        type="text"
+                        className="form-control-rounded form-control"
+                        name="lastName"
+                      />
+                    </div>
+                    <div className="position-relative form-group">
+                      <label className="formEmail">Email</label>
+                      <input
+                      required
+                        // placeholder="Enter email"
+                        type="email"
+                        className="form-control-rounded form-control"
+                        name="email"
+                      />
+                    </div>
+                    <div className="position-relative form-group">
+                      <label className="formNumber">Phone</label>
+                      <input
+                      required
+                        // placeholder="Password"
+                        type="text"
+                        className="form-control-rounded form-control"
+                        name="phone"
+                      />
+                    </div>
 
+                    <div className="position-relative form-group">
+                    <label className="formMessage">
+                          Message
+                          </label>
+                          <textarea
+                            required
+                            name="message"
+                            defaultValue={""}
+                            className="form-control-rounded form-control"
+                          />
+                        
+                      </div>
+
+                     <Button className="btn btn-secondary" type="submit">Submit Contact</Button>
+                  </form>
+                </div>
+              </div>
+              </div>
+
+            </div>
+          </Fade>
+        </div>
 
         {/* </div> */}
       </React.Fragment>

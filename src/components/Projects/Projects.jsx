@@ -7,9 +7,9 @@ import Fade from "react-reveal/Fade";
 class Projects extends React.Component {
   state = {
     groupProps: {
-      appear: false,
-      enter: true,
-      exit: true,
+      appear: true,
+      // enter: true,
+      // exit: true,
     },
     project: [
       {
@@ -62,7 +62,8 @@ class Projects extends React.Component {
               <TransitionGroup {...this.state.groupProps}>
               
               {this.state.project.map((project) => (
-                  <Fade key={project.id}> 
+                  // <Fade key={project.id} collapse bottom> 
+                  <Fade key={project.id} > 
                 <div className="col" >
                   <div className="card-default card" id="cardBottomBorder">
                     <div
@@ -91,20 +92,23 @@ class Projects extends React.Component {
                         className="btn-group btn-group-toggle"
                         data-toggle="buttons"
                       >
+                        {project.code === null ? "" : 
                         <label
-                          className="btn btn-secondary "
+                        className="btn btn-secondary "
+                      >
+                        <a
+                          id="projectLinks"
+                          type="radio"
+                          name="options"
+                          href={project.project}
                         >
-                          <a
-                            id="projectLinks"
-                            type="radio"
-                            name="options"
-                            href={project.project}
-                          >
-                              {project.code === null ? "N/A" : "PROJECT "}
-                          </a>
-                        </label>
+                            PROJECT
+                        </a>
+                      </label>
+                        }
 
-                        <label className="btn btn-secondary ">
+                        {project.code === null ? "" : 
+                          <label className="btn btn-secondary ">
                           <a
                             // style={{ decoration: "none" }}
                             id="projectLinks"
@@ -112,20 +116,25 @@ class Projects extends React.Component {
                             name="options"
                             href={project.code}
                           >
-                            {project.code === null ? "N/A" : "CODE "}
+                            CODE
                           </a>
                         </label>
-                        <label className="btn btn-secondary">
-                          <a
-                            // style={{ decoration: "none" }}
-                            id="projectLinks"
-                            type="radio"
-                            name="options"
-                            href={project.video}
-                          >
-                            {project.video === null ? "N/A" : "YOUTUBE "}
-                          </a>
-                        </label>
+                        }
+                        
+                        {project.video === null ? "" : 
+                         <label className="btn btn-secondary">
+                         <a
+                           // style={{ decoration: "none" }}
+                           id="projectLinks"
+                           type="radio"
+                           name="options"
+                           href={project.video}
+                         >
+                           Video
+                         </a>
+                       </label>
+                        }
+                       
                       </div>
                     </div>
                   </div>

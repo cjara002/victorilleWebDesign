@@ -17,22 +17,28 @@ class AboutMe extends React.Component {
               <Zoom right>
                 <div className="col-6">
                   <div className="aboutFt">
-                    <h1>Working on PROGRESS</h1>
-                    <h2>not perfection</h2>
+
+                    <h1>I AM 
+                      <br />
+                    <span id="aboutReel"> </span>
+                    </h1>
+
                   </div>
                 </div>
               </Zoom>
               <div className="col-6" id="verticalLine">
               <Zoom left>
                 <p>
-                  <span id="emphasis">I</span> started my career in the medical
+                  {/* <span id="emphasis">I</span> started my career in the medical
                   field providing support to patients abroad and
                   domestically. During that time, I saw the gap that technology
                    bridged. Technology provides long term solutions to real
                   world problems.
                   I also bring with me my love for art and
                   design. Web Development brings both art and critically thinking
-                  into one field.
+                  into one field. */}
+
+                  <span id="emphasis">I</span> strive to provide quality work by staying on top of deadlines, cooperating effectively with my team, demonstrating flexibility, and resolving issues that may hinder progress. I want to join a team that is currently disrupting an industry. I want to be in an environment that can bring various challenges, as I know this will shape who I am as a person and who I am as a developer. Just like with Imperio, it brings me great joy to tackle and solve real-world problems.
                 </p>
                 </Zoom>
               </div>

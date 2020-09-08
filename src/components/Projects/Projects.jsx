@@ -20,7 +20,6 @@ class Projects extends React.Component {
         project: "https://cjara002.github.io/AirBnB.Unique/",
         code: "https://github.com/cjara002/AirBnB.Unique",
         video: null,
-
       },
       {
         id: 1,
@@ -29,21 +28,21 @@ class Projects extends React.Component {
         stack: "React, HTML, CSS",
         project: "https://cjara002.github.io/taskTracker/",
         code: "https://github.com/cjara002/taskTracker",
-        video: "https://www.youtube.com/watch?v=xRKpxHlh3uY&list=PLvzQZBo6Tz-uIF9SPoqN52B6I49r4w5eC",
+        video:
+          "https://www.youtube.com/watch?v=xRKpxHlh3uY&list=PLvzQZBo6Tz-uIF9SPoqN52B6I49r4w5eC",
       },
       {
-
         id: 2,
         name: "Imperio",
         image: "https://bit.ly/3amXZpW",
         stack: "React, HTML, CSS, C#, SQL",
         project: null,
         code: null,
-        video: "https://www.youtube.com/watch?v=nuJpoidFZRg&list=PLvzQZBo6Tz-s0wj61cuZW_ijhAAl--ir4",
+        video:
+          "https://www.youtube.com/watch?v=nuJpoidFZRg&list=PLvzQZBo6Tz-s0wj61cuZW_ijhAAl--ir4",
       },
-    ]
+    ],
   };
-
 
   render() {
     return (
@@ -60,87 +59,97 @@ class Projects extends React.Component {
           <div className="container">
             <div className="row">
               <TransitionGroup {...this.state.groupProps}>
-              
-              {this.state.project.map((project) => (
-                  // <Fade key={project.id} collapse bottom> 
-                  <Fade key={project.id} > 
-                <div className="col" >
-                  <div className="card-default card" id="cardBottomBorder">
-                    <div
-                      className="text-center card-body"
-                      style={{
-                        background: `${this.props.backgroundColor}`,
-                      }}
-                    >
-                      <h2 id ="projectTitle">{project.name}</h2>
-                      <span id= "techStack">Technology Used: {project.stack}</span>
-                      <br />
-                      <br />
-                      <img
-                        src={project.image}
-                        alt="projectImage"
-                        id="projectPhoto"
-                      />
-                    </div>
-                    <div
-                      className="card-footer"
-                      style={{
-                        background: `${this.props.backgroundColor}`,
-                      }}
-                    >
-                      <div
-                        className="btn-group btn-group-toggle"
-                        data-toggle="buttons"
-                      >
-                        {project.code === null ? "" : 
-                        <label
-                        className="btn btn-secondary "
-                      >
-                        <a
-                          id="projectLinks"
-                          type="radio"
-                          name="options"
-                          href={project.project}
+                {this.state.project.map((project) => (
+                  // <Fade key={project.id} collapse bottom>
+                  <Fade key={project.id}>
+                    <div className="col">
+                      <div className="card-default card" id="cardBottomBorder">
+                        <div
+                          className="text-center card-body"
+                          style={{
+                            background: `${this.props.backgroundColor}`,
+                          }}
                         >
-                            PROJECT
-                        </a>
-                      </label>
-                        }
-
-                        {project.code === null ? "" : 
-                          <label className="btn btn-secondary ">
-                          <a
-                            // style={{ decoration: "none" }}
-                            id="projectLinks"
-                            type="radio"
-                            name="options"
-                            href={project.code}
+                          <h2 id="projectTitle">{project.name}</h2>
+                          <span id="techStack">
+                            Technology Used: {project.stack}
+                          </span>
+                          <br />
+                          <br />
+                          <img
+                            src={project.image}
+                            alt="projectImage"
+                            id="projectPhoto"
+                          />
+                        </div>
+                        <div
+                          className="card-footer"
+                          style={{
+                            background: `${this.props.backgroundColor}`,
+                          }}
+                        >
+                          <div
+                            className="btn-group btn-group-toggle"
+                            data-toggle="buttons"
                           >
-                            CODE
-                          </a>
-                        </label>
-                        }
-                        
-                        {project.video === null ? "" : 
-                         <label className="btn btn-secondary">
-                         <a
-                           // style={{ decoration: "none" }}
-                           id="projectLinks"
-                           type="radio"
-                           name="options"
-                           href={project.video}
-                         >
-                           Video
-                         </a>
-                       </label>
-                        }
-                       
+                            {project.code === null ? (
+                              ""
+                            ) : (
+                              <label className="btn btn-secondary ">
+                                <a
+                                  id="projectLinks"
+                                  type="radio"
+                                  name="options"
+                                  href={project.project}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  PROJECT
+                                </a>
+                              </label>
+                            )}
+
+                            {project.code === null ? (
+                              ""
+                            ) : (
+                              <label className="btn btn-secondary ">
+                                <a
+                                  // style={{ decoration: "none" }}
+                                  id="projectLinks"
+                                  type="radio"
+                                  name="options"
+                                  href={project.code}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  CODE
+                                </a>
+                              </label>
+                            )}
+
+                            {project.video === null ? (
+                              ""
+                            ) : (
+                              <label className="btn btn-secondary">
+                                <a
+                                  // style={{ decoration: "none" }}
+                                  id="projectLinks"
+                                  type="radio"
+                                  name="options"
+                                  href={project.video}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  VIDEO
+                                </a>
+                              </label>
+                            )}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                </Fade>
-              ))}
+                  </Fade>
+                ))}
               </TransitionGroup>
             </div>
           </div>

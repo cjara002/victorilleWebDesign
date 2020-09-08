@@ -27,6 +27,27 @@
     padding: 4%;
   } */
 
+  #aboutReel {
+    color: #000088;
+  }
+  #aboutReel:after {
+    content: "";
+    animation: spin 20s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {content: "A SOFTWARE DEVELOPER";}
+    10% {content: "A CRITICAL THINKER";}
+    20% {content: "MEXICAN AMERICAN";}
+    30% {content: "AN ANTHROPOLOGIST";}
+    40% {content: "A TENNIS PLAYER";}
+    50% {content: "AN ARTIST";}
+    60% {content: "FUNNY";}
+    70% {content: "A PROBLEM SOLVER";}
+    80% {content: "A CHEF";}
+    90% {content: "ADVENTUROUS";}
+  } 
+
   @media (max-width: 600px) {
     /* ========================================================================
 AboutMe Start
@@ -46,6 +67,27 @@ AboutMe Start
     font-size: .7rem;
   }
 
+
+
+  /* .spin #spin {
+    color:red !important;
+  } */
+  /* #spin:after {
+    content:"";
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% { content:"ipsum"; font-size: 200px }
+    10% { content:"dolor" }
+    20% { content:"sit" }
+    30% { content:"amet" }
+    40% { content:"consectetur" }
+    50% { content: "adipisicing" }
+    60% { content: "elit" }
+    70% { content: "Hic" }
+    80% { content: "atque" }
+    90% { content: "fuga" }
+  } */
 
   
     /* ========================================================================

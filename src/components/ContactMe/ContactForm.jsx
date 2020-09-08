@@ -45,6 +45,8 @@ class ContactForm extends React.Component {
                 href="https://github.com/cjara002"
                 data-toggle="tooltip"
                 title="GitHub"
+                target="_blank"
+                rel='noopener noreferrer'
               >
                 <img
                   src={Github}
@@ -56,9 +58,11 @@ class ContactForm extends React.Component {
             </li>
             <li className="iconSocial">
               <a
-                href="www.linkedin.com/in/carlos-j-jara"
+                href="https://linkedin.com/in/carlos-j-jara"
                 data-toggle="tooltip"
                 title="LinkedIn"
+                target="_blank"
+                rel='noopener noreferrer'
               >
                 <img
                   src={LinkedIn}

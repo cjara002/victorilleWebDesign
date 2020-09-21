@@ -20,9 +20,47 @@
 
 #projectPhoto {
     display: inline-block;
-    width: 100%;
+    /* width: 100%; */
     border: solid;
     border-color: #000088;
+    opacity: 1;
+    /* height: auto; */
+    transition: .5s ease;
+    /* backface-visibility: hidden; */
+  }
+
+  #projectImageContainer {
+    background-color: black;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    overflow: hidden;
+  }
+
+  #projectImageContainer:hover img {
+    opacity: 0.2;
+  }
+
+  #projectInnerDetails{
+    /* height: 100%; */
+    width: 100%;
+    position: absolute;
+    /* top: auto; */
+    /* padding: auto; */
+    z-index: 1;
+    /* top: 15px; */
+    padding: 200px 40px;
+  }
+
+   #details {
+    display: none;
+  }
+
+  #projectImageContainer:hover #details {
+   display: block;
+   font-size: 1.5rem;
+   color: white;
+   transition: .5s ease;
   }
 
 #projectLinks {

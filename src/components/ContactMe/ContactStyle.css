@@ -41,6 +41,15 @@
   background: #000088;
 }
 
+#contactInfo {
+  /* display: inline-block; */
+  /* padding: 10px;
+  margin: 10px; */
+  background-color: white;
+  border-radius: 50px;
+  width: 75%;
+  /* text-decoration: none; */
+}
 @media (max-width: 600px) {
   #contactBorder {
     padding: 1rem;

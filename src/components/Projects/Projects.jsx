@@ -16,6 +16,7 @@ class Projects extends React.Component {
         id: 0,
         name: "AirBnB.Unique",
         image: "https://bit.ly/2VOgVbG",
+        description: "A website were an AirBnB host can find  a reliable, local cleaner.",
         stack: "React, Redux, HTML, CSS, C#, SQL",
         project: "https://cjara002.github.io/AirBnB.Unique/",
         code: "https://github.com/cjara002/AirBnB.Unique",
@@ -25,6 +26,7 @@ class Projects extends React.Component {
         id: 1,
         name: "Task Tracker",
         image: "https://bit.ly/2KmRTeA",
+        description: "Keep track of your tasks for the day. You're one task away from greatness.",
         stack: "React, HTML, CSS",
         project: "https://cjara002.github.io/taskTracker/",
         code: "https://github.com/cjara002/taskTracker",
@@ -35,6 +37,7 @@ class Projects extends React.Component {
         id: 2,
         name: "Imperio",
         image: "https://bit.ly/3amXZpW",
+        description: "A LMS that helps entrepreneurs with advice, insight and prowerful guidance.",
         stack: "React, HTML, CSS, C#, SQL",
         project: null,
         code: null,
@@ -76,11 +79,18 @@ class Projects extends React.Component {
                           </span>
                           <br />
                           <br />
-                          <img
-                            src={project.image}
-                            alt="projectImage"
-                            id="projectPhoto"
-                          />
+                         <div id="projectImageContainer">
+                            <img
+                              src={project.image}
+                              alt="projectImage"
+                              id="projectPhoto"
+                            />
+                            <div id="projectInnerDetails">
+                              <span id="details">
+                                {project.description}
+                              </span>
+                            </div>
+                         </div>
                         </div>
                         <div
                           className="card-footer"

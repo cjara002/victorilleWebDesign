@@ -1,11 +1,7 @@
 .techUsed {
     margin-top: 5%;
     padding-top: 5%;
-    font-family: monospace;
   }
-/* #techUsed {
-    padding: 4%;
-  } */
 
   #borderTech {
     background-color: rgb(0, 0, 136, 0.5);
@@ -23,17 +19,7 @@
   	-webkit-box-shadow: 4px 3px 8px 1px #969696;
   }
 
-/* #techPhoto:hover {
-  height: 90px ;
-  border-radius: 500px ;
-  margin: 0 0.5em ;
-  background-color: transparent ;
-  border: solid ;
-  border-color: #000088;
-  filter: none;
-}  */
-
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     #techTitle {
         font-size: .9rem;
     }

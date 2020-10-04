@@ -8,21 +8,14 @@ class HeroBanner extends React.Component {
       <React.Fragment>
         <div
           style={{
-            backgroundImage: `url(${this.props.backgroundImage})`,
-            backgroundPosition: "right",
+            backgroundImage: `url(${"https://bit.ly/2MeFTfS"})`,
           }}
+          id="HeroBGPhoto"
         >
           <div className="row">
-          <div className="col-6"></div>
-            <div
-              className="col-6"
-              id="heroBanner"
-              style={{ color: `${this.props.fontColor}` }}
-            >
-              {/* <h2>Front End Developer</h2>
-              <span id="lineBreak"></span> */}
+            <div className="col-6"></div>
+            <div className="col-6" id="heroBanner">
               <h1>CARLOS JARA</h1>
-              <br />
               <div id="heroValuesContainer">
                 <em id="heroArrow" className="fas fa-angle-double-left"></em>
                 <h4 className="heroValues">
@@ -31,7 +24,6 @@ class HeroBanner extends React.Component {
                 </h4>
                 <em id="heroArrow" className="fas fa-angle-double-right"></em>
               </div>
-              <br />
             </div>
           </div>
         </div>

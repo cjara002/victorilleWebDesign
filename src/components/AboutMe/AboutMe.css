@@ -1,7 +1,7 @@
 .about {
     margin-top: 5%;
     padding-top: 5%;
-    font-family: monospace;
+    /* font-family: monospace; */
   }
   
   .aboutFt {
@@ -23,73 +23,41 @@
     font-size: 1rem;
   }
 
-  /* #about {
-    padding: 4%;
-  } */
-
   #aboutReel {
     color: #000088;
   }
   #aboutReel:after {
     content: "";
-    animation: spin 20s linear infinite;
+    animation: spin 13s linear infinite;
   }
 
   @keyframes spin {
-    0% {content: "A SOFTWARE DEVELOPER";}
-    10% {content: "A CRITICAL THINKER";}
-    20% {content: "MEXICAN AMERICAN";}
-    30% {content: "AN ANTHROPOLOGIST";}
+    10% {content: "A SOFTWARE DEVELOPER";}
+    20% {content: "A CRITICAL THINKER";}
     40% {content: "A TENNIS PLAYER";}
     50% {content: "AN ARTIST";}
-    60% {content: "FUNNY";}
     70% {content: "A PROBLEM SOLVER";}
     80% {content: "A CHEF";}
-    90% {content: "ADVENTUROUS";}
   } 
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     /* ========================================================================
 AboutMe Start
    ========================================================================== */
-   .aboutFt h1 {
-    font-size: 1 rem
-  }
-   .aboutFt h2 {
-    font-size: .5 rem
-  }
-
   #emphasis {
     font-size: 20px !important;
   }
 
   #verticalLine p{
-    font-size: .7rem;
+    font-size: 1rem;
   }
 
-
-
-  /* .spin #spin {
-    color:red !important;
-  } */
-  /* #spin:after {
-    content:"";
-    animation: spin 2s linear infinite;
+  #aboutReel:after {
+    content: "";
+    animation: spin 13s linear infinite;
+    font-size: 40px;
   }
-  @keyframes spin {
-    0% { content:"ipsum"; font-size: 200px }
-    10% { content:"dolor" }
-    20% { content:"sit" }
-    30% { content:"amet" }
-    40% { content:"consectetur" }
-    50% { content: "adipisicing" }
-    60% { content: "elit" }
-    70% { content: "Hic" }
-    80% { content: "atque" }
-    90% { content: "fuga" }
-  } */
 
-  
     /* ========================================================================
 AboutMe  End
    ========================================================================== */

@@ -1,11 +1,16 @@
 /* ========================================================================
 Hero Banner Start
  ========================================================================== */
+ #HeroBGPhoto {
+background-position: bottom ;
+ }
+
 .heroValues {
   text-transform: uppercase !important;
   -webkit-animation: fadein 3s !important;
   animation: fadein 3s;
   font-size: 1.5rem !important;
+  text-shadow: -20px 10px 10px rgba(0, 0, 0, 0.9);
 }
 
 #heroValuesContainer em,
@@ -20,12 +25,8 @@ Hero Banner Start
   text-align: center;
   margin-top: 10%;
   margin-bottom: 20%;
-}
-
-#heroBanner h2 {
-  font-family: cursive;
-  -webkit-animation: fadein 3s !important;
-  animation: fadein 3s;
+  color: white;
+  text-shadow: -20px 20px 20px rgba(0, 0, 0, 0.9);
 }
 
 #heroBanner h1 {
@@ -36,27 +37,23 @@ Hero Banner Start
   animation: fadein 3s;
 }
 
-#lineBreak {
-  margin: auto;
-  border: solid;
-  display: table;
-  width: 25%;
-  -webkit-animation: fadein 3s !important;
-  animation: fadein 3s;
-}
-
 #heroArrow {
   -webkit-animation: fadein 3s !important;
   animation: fadein 3s;
   position: relative;
+  text-shadow: -10px 10px 10px rgba(0, 0, 0, 0.9);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   /* ========================================================================
   Hero Banner Start
    ========================================================================== */
+   #HeroBGPhoto {
+    background-position: center ;
+     }
+
   .heroValues {
-    font-size: 1rem !important;
+    font-size: .9rem !important;
   }
 
   #heroValuesContainer em,
@@ -72,17 +69,7 @@ Hero Banner Start
 
   #heroBanner h1 {
     font-size: 5rem;
-    /* letter-spacing: 0.2em !important; */
   }
-
-  #heroBanner h2 {
-  font-size: 20px;
-  }
-
-  #lineBreak {
-    width: 15%;
-  }
-
   /* ========================================================================
 Hero Banner End
    ========================================================================== */

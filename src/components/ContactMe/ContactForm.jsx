@@ -7,8 +7,10 @@ import Fade from "react-reveal/Fade";
 
 class ContactForm extends React.Component {
   state = {
-    name: " ",
+    firstName: " ",
+    lastName: " ",
     email: " ",
+    phone: " ",
     message: " ",
   };
 
@@ -38,41 +40,6 @@ class ContactForm extends React.Component {
           id="contactBorder"
         >
           <h1 className="formHeader"> Contact Me</h1>
-
-          {/* <ul>
-            <li className="iconSocial">
-              <a
-                href="https://github.com/cjara002"
-                data-toggle="tooltip"
-                title="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={Github}
-                  className="img-responsive"
-                  alt="github"
-                  id="imageSocial"
-                ></img>
-              </a>
-            </li>
-            <li className="iconSocial">
-              <a
-                href="https://linkedin.com/in/carlos-j-jara"
-                data-toggle="tooltip"
-                title="LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={LinkedIn}
-                  className="img-responsive"
-                  alt="linkedin"
-                  id="imageSocial"
-                ></img>
-              </a>
-            </li>
-          </ul> */}
 
           <Fade bottom>
             <div className="row block-center mt-4 " id="formBorder">
@@ -137,7 +104,6 @@ class ContactForm extends React.Component {
                 </div> */}
               <div className="col-6">
                 <div className="card-default card " id="formContainer">
-                  {/* <div className="card-header">Stacked form</div> */}
                   <div className="card-body">
                     <form
                       method="POST"
@@ -147,23 +113,19 @@ class ContactForm extends React.Component {
                     >
                       <div className="row gtr-50">
                         <input type="hidden" name="form-name" value="contact" />
-                        {/* <div className="position-relative form-group"> */}
                         <div className="col-6 col-12-small">
                           <label className="formName">First Name</label>
                           <input
-                            // placeholder="Enter email"
                             required
                             type="text"
                             className="form-control-rounded form-control"
                             name="firstName"
                           />
                         </div>
-                        {/* <div className="position-relative form-group"> */}
                         <div className="col-6 col-12-small">
                           <label className="formName">Last Name</label>
                           <input
                             required
-                            // placeholder="Enter email"
                             type="text"
                             className="form-control-rounded form-control"
                             name="lastName"
@@ -176,7 +138,6 @@ class ContactForm extends React.Component {
                           <label className="formEmail">Email</label>
                           <input
                             required
-                            // placeholder="Enter email"
                             type="email"
                             className="form-control-rounded form-control"
                             name="email"
@@ -186,7 +147,6 @@ class ContactForm extends React.Component {
                           <label className="formNumber">Phone</label>
                           <input
                             required
-                            // placeholder="Password"
                             type="text"
                             className="form-control-rounded form-control"
                             name="phone"
@@ -213,24 +173,17 @@ class ContactForm extends React.Component {
               </div>
               <div className="col-6">
                 <div className="row gtr-50">
-                  {/* <input type="hidden" name="form-name" value="contact" /> */}
-                  {/* <div className="position-relative form-group"> */}
                   <div className="col-6 col-12-small">
                     <label><b>Email</b></label>
-                    {/* <p id="contactInfo">cjjara002@gmail.com</p> */}
                     <p>cjjara002@gmail.com</p>
                   </div>
-                  {/* <div className="position-relative form-group"> */}
                   <div className="col-6 col-12-small">
                     <label><b>Phone</b></label>
-                    {/* <p id="contactInfo">(626) 539-4396 </p> */}
                     <p>(626) 539-4396 </p>
                   </div>
                 </div>
 
                 <div className="row gtr-50">
-                  {/* <input type="hidden" name="form-name" value="contact" /> */}
-                  {/* <div className="position-relative form-group"> */}
                   <div className="col-6 col-12-small">
                     <label><b>Social</b></label>
                     <ul>
@@ -268,18 +221,11 @@ class ContactForm extends React.Component {
                       </li>
                     </ul>
                   </div>
-                  {/* <div className="position-relative form-group"> */}
-                  {/* <div className="col-6 col-12-small">
-                    <label>Phone</label>
-                    <p>(626) 539-4396 </p>
-                  </div> */}
                 </div>
               </div>
             </div>
           </Fade>
         </div>
-
-        {/* </div> */}
       </React.Fragment>
     );
   }

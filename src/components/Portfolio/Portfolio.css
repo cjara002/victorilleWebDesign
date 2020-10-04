@@ -4,6 +4,7 @@ Portfolio Nav Bar Start
  #navOverEverything {
   z-index: 2;
 }
+
  nav {
   top: 0px;
   background-color: rgb(0, 0, 0, 0.9);
@@ -59,77 +60,13 @@ nav ul a:hover {
   text-decoration: none;
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 30px;
-  -webkit-animation: fadein 3s !important;
-  animation: fadein 3s;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: black;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 8px;
-  bottom: 8px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: white;
-  color: black;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px black;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+.smallTextNav {
+  display: none;
 }
 
 /* ========================================================================
 Portfolio Nav Bar End
  ========================================================================== */
-
-/* button outline has to be white */
-#learn {
-  /* color:white; */
-  font: bold;
-}
 
 /* this overlay does not seem to be working right now.  */
 #overlay {
@@ -147,16 +84,6 @@ Portfolio Nav Bar End
   bottom: 0;
   left: 0;
 }
-
-
-
-
-
-
-
-
-
-
 
 @keyframes fadein {
   from {
@@ -176,27 +103,13 @@ Portfolio Nav Bar End
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   /* ========================================================================
 Portfolio Nav Bar Start
  ========================================================================== */
   nav {
     width: 100%;
-    height: 30px;
+    height: 40px;
   }
 
   nav ul {
@@ -211,17 +124,12 @@ Portfolio Nav Bar Start
     padding: 5px;
     font-size: small;
   }
-
-  .switch {
-    width: 38px;
-    height: 15px;
+  .largeTextNav{
+    display: none;
   }
 
-  .slider:before {
-    height: 8px;
-    width: 8px;
-    left: 4px;
-    bottom: 4px; 
+  .smallTextNav{
+    display: inline-block;
   }
 
   /* ========================================================================

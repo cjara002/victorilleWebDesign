@@ -8,101 +8,102 @@ import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Portfolio extends React.Component {
-  state = {
-    darkMode: false,
-  };
-
-  componentDidMount() {
-    const ColorMode = JSON.parse(localStorage.getItem("darkMode"));
-    if (ColorMode) {
-      this.setDarkMode();
-    } else {
-      localStorage.setItem("darkMode", JSON.stringify(this.state.darkMode));
-    }
-  }
-
-  slider = () => {
-    this.setState((prevState) => ({
-      darkMode: !prevState.darkMode,
-    }));
-    localStorage.setItem("darkMode", JSON.stringify(!this.state.darkMode));
-    console.log("slider:", this.state.darkMode);
-  };
-
-  setDarkMode = () => {
-    const ColorMode = JSON.parse(localStorage.getItem("darkMode"));
-    this.setState(() => ({
-      darkMode: ColorMode,
-    }));
-  };
   render() {
     return (
       <React.Fragment>
         <nav id="navOverEverything">
           <div className="container">
             <div className="row">
-              <div className="col-md-3">
+              <div className="col-3">
                 <ul>
-                  {/* <li>
-                     CJ 
-                    </li> */}
                   <li>
-                    <a href="https://www.carlosjaraportfolio.com/"> CJ </a>
+                    <a
+                      href="https://www.carlosjaraportfolio.com/"
+                      className="largeTextNav"
+                    >
+                      {" "}
+                      Carlos Jara{" "}
+                    </a>
+                    <a
+                      href="https://www.carlosjaraportfolio.com/"
+                      className="smallTextNav"
+                    >
+                      {" "}
+                      CJ{" "}
+                    </a>
                   </li>
-                  {/* Need to figure out how to tur the circle black once it is clicked. */}
                 </ul>
               </div>
 
-              <div className="col-md-9">
+              <div className="col-9">
                 <ul className="navButton">
                   <li>
                     {" "}
-                    <a href="#about">About</a>
-                    {/* {window.screen.height < 600 ? <a href="#about">short </a>: <a href="#about">About</a>} */}
+                    <a href="#about" className="largeTextNav">
+                      About
+                    </a>
+                    <a href="#about" className="smallTextNav">
+                      <em
+                        className="fa-1x mr-2 fas fa-laptop"
+                        style={{ cursor: "pointer" }}
+                        data-toggle="tooltip"
+                        title="About Me"
+                      ></em>
+                    </a>
                   </li>
                   <li>
-                    <a href="#techUsed">Technology</a>
+                    <a href="#techUsed" className="largeTextNav">
+                      Technology
+                    </a>
+                    <a href="#techUsed" className="smallTextNav">
+                      <em
+                        className="fa-1x mr-2 fas fa-cog"
+                        style={{ cursor: "pointer" }}
+                        data-toggle="tooltip"
+                        title="Technology"
+                      ></em>
+                    </a>
                   </li>
                   <li>
-                    <a href="#myProjects">Recent Work</a>
+                    <a href="#myProjects" className="largeTextNav">
+                      Recent Work
+                    </a>
+                    <a href="#myProjects" className="smallTextNav">
+                      <em
+                        className="fa-1x mr-2 fas fa-briefcase"
+                        style={{ cursor: "pointer" }}
+                        data-toggle="tooltip"
+                        title="Recent Work"
+                      ></em>
+                    </a>
                   </li>
                   <li>
-                    <a href="#formBorder">Contact</a>
+                    <a href="#formBorder" className="largeTextNav">
+                      Contact
+                    </a>
+                    <a href="#formBorder" className="smallTextNav">
+                      <em
+                        className="fa-1x mr-2 fas fa-envelope-open-text"
+                        style={{ cursor: "pointer" }}
+                        data-toggle="tooltip"
+                        title="Contact Me"
+                      ></em>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </nav>
-        <HeroBanner
-          backgroundImage={
-            this.state.darkMode === true
-              ? "https://bit.ly/3exjLtv"
-              : "https://bit.ly/2MeFTfS"
-          }
-          fontColor={this.state.darkMode === true ? "white" : "black"}
-        />
+        <HeroBanner />
 
-        <AboutMe
-          backgroundColor={this.state.darkMode === true ? "black" : "white"}
-          fontColor={this.state.darkMode === true ? "white" : "black"}
-        />
+        <AboutMe />
 
-        <TechUsed
-          backgroundImage={
-            this.state.darkMode === true
-              ? "https://bit.ly/2XfVthC"
-              : "https://bit.ly/2yJf9Ba"
-          }
-          fontColor={this.state.darkMode === true ? "white" : "white"}
-        /> 
+        <TechUsed backgroundImage={"https://bit.ly/2yJf9Ba"} />
 
-        <Projects
-          backgroundColor={this.state.darkMode === true ? "black" : "white"}
-          fontColor={this.state.darkMode === true ? "white" : "black"}
-        />
+        <Projects />
 
-        <ContactForm /> 
+        <ContactForm />
       </React.Fragment>
     );
   }

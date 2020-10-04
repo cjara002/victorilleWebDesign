@@ -8,8 +8,6 @@ class Projects extends React.Component {
   state = {
     groupProps: {
       appear: true,
-      // enter: true,
-      // exit: true,
     },
     project: [
       {
@@ -53,39 +51,29 @@ class Projects extends React.Component {
         <div
           className="myProjects"
           id="myProjects"
-          style={{
-            background: `${this.props.backgroundColor}`,
-            color: `${this.props.fontColor}`,
-          }}
         >
-          <h1>Recent Work</h1>
+          <h1 id="sectionTitle">Recent Work</h1>
           <div className="container">
             <div className="row">
               <TransitionGroup {...this.state.groupProps}>
                 {this.state.project.map((project) => (
-                  // <Fade key={project.id} collapse bottom>
                   <Fade key={project.id}>
                     <div className="col">
                       <div className="card-default card" id="cardBottomBorder">
                         <div
                           className="text-center card-body"
-                          style={{
-                            background: `${this.props.backgroundColor}`,
-                          }}
                         >
                           <h2 id="projectTitle">{project.name}</h2>
                           <span id="techStack">
                             Technology Used: {project.stack}
                           </span>
-                          <br />
-                          <br />
                          <div id="projectImageContainer">
                             <img
                               src={project.image}
                               alt="projectImage"
                               id="projectPhoto"
                             />
-                            <div id="projectInnerDetails">
+                            <div id="projectInnerDetails"> 
                               <span id="details">
                                 {project.description}
                               </span>
@@ -94,9 +82,6 @@ class Projects extends React.Component {
                         </div>
                         <div
                           className="card-footer"
-                          style={{
-                            background: `${this.props.backgroundColor}`,
-                          }}
                         >
                           <div
                             className="btn-group btn-group-toggle"
@@ -124,7 +109,6 @@ class Projects extends React.Component {
                             ) : (
                               <label className="btn btn-secondary ">
                                 <a
-                                  // style={{ decoration: "none" }}
                                   id="projectLinks"
                                   type="radio"
                                   name="options"
@@ -142,7 +126,6 @@ class Projects extends React.Component {
                             ) : (
                               <label className="btn btn-secondary">
                                 <a
-                                  // style={{ decoration: "none" }}
                                   id="projectLinks"
                                   type="radio"
                                   name="options"

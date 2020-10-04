@@ -7,7 +7,8 @@
 }
 
 .formHeader,
-.formName,
+.formFirstName,
+.formLastName,
 .formEmail,
 .formMessage, 
 .formNumber

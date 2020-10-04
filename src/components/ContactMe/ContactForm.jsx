@@ -114,7 +114,7 @@ class ContactForm extends React.Component {
                       <div className="row gtr-50">
                         <input type="hidden" name="form-name" value="contact" />
                         <div className="col-6 col-12-small">
-                          <label className="formName">First Name</label>
+                          <label className="formFirstName">First Name</label>
                           <input
                             required
                             type="text"
@@ -123,7 +123,7 @@ class ContactForm extends React.Component {
                           />
                         </div>
                         <div className="col-6 col-12-small">
-                          <label className="formName">Last Name</label>
+                          <label className="formLastName">Last Name</label>
                           <input
                             required
                             type="text"

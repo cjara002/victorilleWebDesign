@@ -80,7 +80,68 @@ class Projects extends React.Component {
                             </div>
                          </div>
                         </div>
-                        <div
+                        {/* <div
+                          className="card-footer"
+                        >
+                          <div
+                            className="btn-group btn-group-toggle"
+                            data-toggle="buttons"
+                          >
+                            {project.code === null ? (
+                              ""
+                            ) : (
+                              <label className="btn btn-secondary ">
+                                <a
+                                  id="projectLinks"
+                                  type="radio"
+                                  name="options"
+                                  href={project.project}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  PROJECT
+                                </a>
+                              </label>
+                            )}
+
+                            {project.code === null ? (
+                              ""
+                            ) : (
+                              <label className="btn btn-secondary ">
+                                <a
+                                  id="projectLinks"
+                                  type="radio"
+                                  name="options"
+                                  href={project.code}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  CODE
+                                </a>
+                              </label>
+                            )}
+
+                            {project.video === null ? (
+                              ""
+                            ) : (
+                              <label className="btn btn-secondary">
+                                <a
+                                  id="projectLinks"
+                                  type="radio"
+                                  name="options"
+                                  href={project.video}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  VIDEO
+                                </a>
+                              </label>
+                            )}
+                          </div>
+                        </div> */}
+                      </div>
+                    </div>
+                    <div
                           className="card-footer"
                         >
                           <div
@@ -139,8 +200,6 @@ class Projects extends React.Component {
                             )}
                           </div>
                         </div>
-                      </div>
-                    </div>
                   </Fade>
                 ))}
               </TransitionGroup>

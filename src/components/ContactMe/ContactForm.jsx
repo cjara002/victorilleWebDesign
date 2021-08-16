@@ -43,65 +43,6 @@ class ContactForm extends React.Component {
 
           <Fade bottom>
             <div className="row block-center mt-4 " id="formBorder">
-              {/* <div className="col">
-                  <div className="container" id="formContainer">
-                    <form
-                      method="POST"
-                      name="contact"
-                      action="/contact"
-                      id="formContact"
-                    >
-                      <input type="hidden" name="form-name" value="contact" />
-                      <div>
-                        <label className="formName">
-                          Name:{" "}
-                          <input
-                            required
-                            type="text"
-                            name="name"
-                          />
-                        </label>
-                      </div>
-    
-                      <div>
-                        <label className="formEmail">
-                          Email:{" "}
-                          <input
-                            required
-                            type="email"
-                            name="email"
-                          />
-                        </label>
-                      </div>
-                      <div>
-                        <label className="formNumber">
-                          Phone Number:{" "}
-                          <input
-                            type="text"
-                            name="number"
-                          />
-                        </label>
-                      </div>
-                      <div>
-                        <label className="formMessage">
-                          Message:{" "}
-                          <textarea
-                            required
-                            name="message"
-                            defaultValue={""}
-                          />
-                        </label>
-                      </div>
-    
-                      <div>
-                        <div data-netlify-recaptcha="true"></div>
-                      </div>
-                      <div>
-                        <Button color="secondary" type="submit">Send</Button>
-                      </div>
-                    </form>
-                  </div>
-                </div> */}
               <div className="col-6">
                 <div className="card-default card " id="formContainer">
                   <div className="card-body">
@@ -113,16 +54,16 @@ class ContactForm extends React.Component {
                     >
                       <div className="row gtr-50">
                         <input type="hidden" name="form-name" value="contact" />
-                        <div className="col-6 col-12-small">
-                          <label className="formFirstName">First Name</label>
+                        <div className="col-6 col-12">
+                          <label className="formName"> Name</label>
                           <input
                             required
                             type="text"
                             className="form-control-rounded form-control"
-                            name="firstName"
+                            name="name"
                           />
                         </div>
-                        <div className="col-6 col-12-small">
+                        {/* <div className="col-6 col-12-small">
                           <label className="formLastName">Last Name</label>
                           <input
                             required
@@ -130,7 +71,7 @@ class ContactForm extends React.Component {
                             className="form-control-rounded form-control"
                             name="lastName"
                           />
-                        </div>
+                        </div> */}
                       </div>
 
                       <div className="row gtr-50">
@@ -144,7 +85,7 @@ class ContactForm extends React.Component {
                           />
                         </div>
                         <div className="col-6 col-12-small">
-                          <label className="formNumber">Phone</label>
+                          <label className="formNumber">Phone Number</label>
                           <input
                             required
                             type="text"

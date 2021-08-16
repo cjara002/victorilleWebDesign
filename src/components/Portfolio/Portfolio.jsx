@@ -1,14 +1,23 @@
 import AboutMe from "../AboutMe/AboutMe";
 import ContactForm from "../ContactMe/ContactForm";
 import HeroBanner from "../HeroBanner/HeroBanner";
-import TechUsed from "../TechUsed/TechUsed.jsx";
-import React from "react";
-import Projects from "../Projects/Projects.jsx";
+// import TechUsed from "../TechUsed/TechUsed.jsx";
+import React, { useState } from "react";
+// import Projects from "../Projects/Projects.jsx";
 import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ProjectWithTabs from "../Projects/Projects2/ProjectsWithTabs";
+import { Nav, NavItem, NavLink, } from 'reactstrap';
+import classnames from 'classnames';
+import Project from "../Projects/listOfProject";
 
-class Portfolio extends React.Component {
-  render() {
+const Portfolio = () => {
+
+  const [activeTab, setActiveTab] = useState('1');
+  const toggle = tab => {
+    if(activeTab !== tab) setActiveTab(tab);
+  }
+
     return (
       <React.Fragment>
         <nav id="navOverEverything">
@@ -17,7 +26,7 @@ class Portfolio extends React.Component {
               <div className="col-3">
                 <ul>
                   <li>
-                    <a
+                    {/* <a
                       href="https://www.carlosjaraportfolio.com/"
                       className="largeTextNav"
                     >
@@ -30,13 +39,36 @@ class Portfolio extends React.Component {
                     >
                       {" "}
                       CJ{" "}
-                    </a>
+                    </a> */}
+                    <span className="fName text-muted">Carlos</span>
+                    <span className="slashBar text-muted">/</span>
+                    <span className="lName">Jara</span>
                   </li>
                 </ul>
               </div>
 
               <div className="col-9">
                 <ul className="navButton">
+                  <li>
+                    {" "}
+                    <a
+                      href="https://www.carlosjaraportfolio.com/"
+                      className="largeTextNav"
+                    >
+                      Home
+                    </a>
+                    <a
+                      href="https://www.carlosjaraportfolio.com/"
+                      className="smallTextNav"
+                    >
+                      <em
+                        className="fa-1x mr-2 fas fa-home"
+                        style={{ cursor: "pointer" }}
+                        data-toggle="tooltip"
+                        title="Home"
+                      ></em>
+                    </a>
+                  </li>
                   <li>
                     {" "}
                     <a href="#about" className="largeTextNav">
@@ -51,7 +83,7 @@ class Portfolio extends React.Component {
                       ></em>
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="#techUsed" className="largeTextNav">
                       Technology
                     </a>
@@ -63,7 +95,7 @@ class Portfolio extends React.Component {
                         title="Technology"
                       ></em>
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a href="#myProjects" className="largeTextNav">
                       Recent Work
@@ -95,18 +127,46 @@ class Portfolio extends React.Component {
             </div>
           </div>
         </nav>
+
         <HeroBanner />
 
         <AboutMe />
 
-        <TechUsed backgroundImage={"https://bit.ly/2yJf9Ba"} />
+        <div
+          className="myProjects"
+          id="myProjects"
+          style={{
+            backgroundImage: `url(https://bit.ly/2yJf9Ba})`,
+          }}
+        >
 
-        <Projects />
-
+           <Nav tabs>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === '1' })}
+              onClick={() => { toggle('1'); }}
+            >
+              Web Apps
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === '2' })}
+              onClick={() => { toggle('2'); }}
+            >
+              Mobile First Apps
+            </NavLink>
+          </NavItem>
+        </Nav>
+          {Project.map((project) => (
+            <ProjectWithTabs project={project} activeTab={activeTab} key={project.id}/>
+          ))}
+        </div>
         <ContactForm />
       </React.Fragment>
     );
   }
-}
+// }
 
 export default Portfolio;
+

@@ -1,7 +1,6 @@
 .about {
     margin-top: 5%;
     padding-top: 5%;
-    /* font-family: monospace; */
   }
   
   .aboutFt {
@@ -10,13 +9,13 @@
   
 
   #verticalLine {
-    border-left: solid #000088;
+    border-left: solid white;
   }
   
   #emphasis {
     font-size: 20px;
     font: bold;
-    color: #000088;
+    color: white;
   }
 
   #verticalLine p{
@@ -24,21 +23,36 @@
   }
 
   #aboutReel {
-    color: #000088;
+    color: white;
   }
   #aboutReel:after {
-    content: "";
+    content: "...";
     animation: spin 13s linear infinite;
   }
 
   @keyframes spin {
-    10% {content: "A SOFTWARE DEVELOPER";}
+    10% {content: "A DEVELOPER";}
     20% {content: "A CRITICAL THINKER";}
     40% {content: "A TENNIS PLAYER";}
     50% {content: "AN ARTIST";}
     70% {content: "A PROBLEM SOLVER";}
     80% {content: "A CHEF";}
   } 
+
+  .carlosPhoto {
+    width:50%;
+    height: 100%;
+    border-radius: 50px;
+  }
+
+  .Resume {
+    display: inline-block;
+    padding: 10px;
+    font-size: large;
+  color: white;
+  text-decoration: none;
+  }
+
 
   @media (max-width: 700px) {
     /* ========================================================================

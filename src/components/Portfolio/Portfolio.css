@@ -36,7 +36,7 @@ nav ul a {
   display: inline-block;
   padding: 10px;
   font-size: medium;
-  color: white;
+  color: #6c757d;
   text-decoration: none;
   position: relative;
 }
@@ -45,7 +45,7 @@ nav ul a::after {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: #000088;
+  background: white;
   width: 0%;
   height: 5px;
   content: "";
@@ -56,12 +56,33 @@ nav ul a:hover::after {
 }
 
 nav ul a:hover {
-  color: #000088;
+  color: white;
   text-decoration: none;
 }
 
 .smallTextNav {
   display: none;
+}
+
+.fName {
+  font-family: 'Great Vibes', cursive;
+  padding: 5px;
+  font-size: 1.5em;
+  color: white;
+  position: relative;
+}
+.lName {
+  font-family: 'Great Vibes', cursive;
+  padding: 5px;
+  font-size: 1.5em;
+  color: white;
+  position: relative;
+}
+
+.slashBar{
+  font-family: 'Great Vibes', cursive;
+  /* padding: 2.5px; */
+  font-size: 2em;
 }
 
 /* ========================================================================

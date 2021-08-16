@@ -1,0 +1,99 @@
+
+.myProjects {
+  margin-top: 5%;
+  padding-top: 5%;
+}
+
+#cardBottomBorder {
+  margin-bottom: 2em;
+}
+
+#techStack {
+  margin-bottom: 5%;
+}
+
+
+#projectPhoto {
+  display: inline-block;
+  width: 100%;
+  border: solid;
+  border-color: #000088;
+  opacity: 1;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+#projectImageContainer {
+  background-color: black;
+  display: flex;
+  overflow: hidden;
+}
+
+#projectImageContainer:hover img {
+  opacity: 0.2;
+}
+
+#projectInnerDetails{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: auto;
+  z-index: 1;
+  padding: 200px 40px;
+}
+
+ #details {
+  display: none;
+}
+
+#projectImageContainer:hover #details {
+ display: block;
+ font-size: 1.5rem;
+ color: white;
+ transition: .5s ease;
+}
+
+#projectLinks {
+  display: inline-block;
+   /* padding: 10px; */
+   /* font-size: large; */
+ color: white;
+ text-decoration: none;
+}
+
+.row {
+  margin-right: 0 px !important;
+  margin-left: 0 px !important;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  @media (max-width: 700px) {
+
+    #projectInnerDetails {
+      padding: 0 ;
+     }
+
+    #projectTitle {
+        font-size: .9rem;
+    }
+    #techStack {
+        font-size: .7rem;
+    }
+
+    #sectionTitle {
+      font-size: 1.5rem;
+    }
+
+    #projectLinks {
+         padding: 2px;
+         font-size: small;
+     }
+
+     #projectImageContainer:hover #details {
+      font-size: 1rem;
+      height: 90%;
+    width: 90%;
+     }
+  }

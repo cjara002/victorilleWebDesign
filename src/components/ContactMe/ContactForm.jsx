@@ -1,8 +1,8 @@
 import React from "react";
 import "./ContactStyle.css";
 import { Button } from "reactstrap";
-import Github from "./Github.png";
-import LinkedIn from "./LinkedIn.png";
+// import Github from "./Github.png";
+// import LinkedIn from "./LinkedIn.png";
 import Fade from "react-reveal/Fade";
 
 class ContactForm extends React.Component {
@@ -43,7 +43,7 @@ class ContactForm extends React.Component {
 
           <Fade bottom>
             <div className="row block-center mt-4 " id="formBorder">
-              <div className="col-6">
+              <div className="col">
                 <div className="card-default card " id="formContainer">
                   <div className="card-body">
                     <form
@@ -63,15 +63,6 @@ class ContactForm extends React.Component {
                             name="name"
                           />
                         </div>
-                        {/* <div className="col-6 col-12-small">
-                          <label className="formLastName">Last Name</label>
-                          <input
-                            required
-                            type="text"
-                            className="form-control-rounded form-control"
-                            name="lastName"
-                          />
-                        </div> */}
                       </div>
 
                       <div className="row gtr-50">
@@ -112,7 +103,7 @@ class ContactForm extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="col-6">
+              {/* <div className="col-6">
                 <div className="row gtr-50">
                   <div className="col-6 col-12-small">
                     <label><b>Email</b></label>
@@ -163,7 +154,7 @@ class ContactForm extends React.Component {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </Fade>
         </div>

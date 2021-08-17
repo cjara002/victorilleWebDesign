@@ -140,24 +140,26 @@ const Portfolio = () => {
           }}
         >
 
-           <Nav tabs>
-          <NavItem>
-            <NavLink
-              className={classnames({ active: activeTab === '1' })}
-              onClick={() => { toggle('1'); }}
-            >
-              Web Apps
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              className={classnames({ active: activeTab === '2' })}
-              onClick={() => { toggle('2'); }}
-            >
-              Mobile First Apps
-            </NavLink>
-          </NavItem>
-        </Nav>
+<div className="container">
+             <Nav tabs>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: activeTab === '1' })}
+                onClick={() => { toggle('1'); }}
+              >
+                Web Apps
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: activeTab === '2' })}
+                onClick={() => { toggle('2'); }}
+              >
+                Mobile First Apps
+              </NavLink>
+            </NavItem>
+          </Nav>
+</div>
           {Project.map((project) => (
             <ProjectWithTabs project={project} activeTab={activeTab} key={project.id}/>
           ))}

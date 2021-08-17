@@ -6,6 +6,7 @@ let Project = [
             description:
               "A website were an AirBnB host can find  a reliable, local cleaner.",
             stack: "React, Redux, HTML, CSS, C#, SQL",
+            project: "https://github.com/cjara002/AirBnB.Unique",
             code: "https://github.com/cjara002/AirBnB.Unique",
             video: null,
             type: "web",

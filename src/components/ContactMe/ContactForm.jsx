@@ -39,18 +39,23 @@ class ContactForm extends React.Component {
           }}
           id="contactBorder"
         >
-          <h1 className="formHeader"> Contact Me</h1>
-
           <Fade bottom>
             <div className="row block-center mt-4 " id="formBorder">
               <div className="col">
                 <div className="card-default card " id="formContainer">
                   <div className="card-body">
+                    <h1 className="formHeader"> Request a free quote</h1>
+                    <p className="formp">
+                      If you need a website built, please feel free to contact
+                      me. I am always interested in helping out a fellow
+                      developer as well. <br /> Hablo Español.
+                    </p>
                     <form
                       method="POST"
                       name="contact"
-                      action="/contact"
+                      action="/success/"
                       id="formContact"
+                      data-netlify="true"
                     >
                       <div className="row gtr-50">
                         <input type="hidden" name="form-name" value="contact" />
@@ -97,7 +102,7 @@ class ContactForm extends React.Component {
                       </div>
 
                       <Button className="btn btn-secondary" type="submit">
-                        Submit Contact
+                        Send Message
                       </Button>
                     </form>
                   </div>

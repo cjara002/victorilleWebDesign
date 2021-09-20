@@ -7,11 +7,11 @@
 }
 
 .formHeader,
-.formFirstName,
-.formLastName,
+.formName,
 .formEmail,
 .formMessage, 
-.formNumber
+.formNumber,
+.formp
 {
   color: white;
 }

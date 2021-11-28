@@ -1,130 +1,150 @@
 import AboutMe from "../AboutMe/AboutMe";
-import ContactForm from "../ContactMe/ContactForm";
-import HeroBanner from "../HeroBanner/HeroBanner";
-// import TechUsed from "../TechUsed/TechUsed.jsx";
-import React, { useState } from "react";
+// import ContactForm from "../ContactMe/ContactForm";
+// import HeroBanner from "../HeroBanner/HeroBanner";
+import HeroBanner2 from "../HeroBanner/HeroBanner2";
+import React from "react";
+// import React, { useState } from "react";
 import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ProjectWithTabs from "../Projects/Projects2/ProjectsWithTabs";
-import { Nav, NavItem, NavLink } from "reactstrap";
-import classnames from "classnames";
-import Project from "../Projects/listOfProject";
+// import ProjectWithTabs from "../Projects/Projects2/ProjectsWithTabs";
+// import { Nav, NavItem, NavLink } from "reactstrap";
+// import classnames from "classnames";
+// import Project from "../Projects/listOfProject";
 
 const Portfolio = () => {
-  const [activeTab, setActiveTab] = useState("1");
-  const toggle = (tab) => {
-    if (activeTab !== tab) setActiveTab(tab);
-  };
+  // const [activeTab, setActiveTab] = useState("1");
+  // const toggle = (tab) => {
+  //   if (activeTab !== tab) setActiveTab(tab);
+  // };
 
   return (
     <React.Fragment>
-      <nav id="navOverEverything">
-        <div className="container">
-          <div className="row">
-            <div className="col-3">
-              <ul>
-                <li>
-                  <a
-                    href="https://github.com/cjara002"
-                    data-toggle="tooltip"
-                    title="GitHub"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-github"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://linkedin.com/in/carlos-j-jara"
-                    data-toggle="tooltip"
-                    title="LinkedIn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                </li>
-                {/* <span className="fName text-muted">Carlos</span>
-                    <span className="slashBar text-muted">/</span>
-                    <span className="lName">Jara</span> */}
-                {/* </li> */}
-              </ul>
-            </div>
+      {/* NavBar Start */}
+        <nav id="navOverEverything">
+          <div className="container">
+            <div className="row">
+              <div className="col-3">
+                <ul >
+                  <li>
+                    <a
+                      href="https://github.com/cjara002"
+                      data-toggle="tooltip"
+                      title="GitHub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="largeTextNav"
+                    >
+                      <i className="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://github.com/cjara002"
+                      data-toggle="tooltip"
+                      title="GitHub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="smallTextNav"
+                    >
+                      <i className="fab fa-github"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://linkedin.com/in/carlos-j-jara"
+                      data-toggle="tooltip"
+                      title="LinkedIn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="largeTextNav"
+                    >
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://linkedin.com/in/carlos-j-jara"
+                      data-toggle="tooltip"
+                      title="LinkedIn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="smallTextNav"
+                    >
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-            <div className="col-9">
-              <ul className="navButton">
-                <li>
-                  {" "}
-                  <a
-                    href="https://www.carlosjaraportfolio.com/"
-                    className="largeTextNav"
-                  >
-                    Home
-                  </a>
-                  <a
-                    href="https://www.carlosjaraportfolio.com/"
-                    className="smallTextNav"
-                  >
-                    <em
-                      className="fa-1x mr-2 fas fa-home"
-                      style={{ cursor: "pointer" }}
-                      data-toggle="tooltip"
-                      title="Home"
-                    ></em>
-                  </a>
-                </li>
-                <li>
-                  {" "}
-                  <a href="#about" className="largeTextNav">
-                    About
-                  </a>
-                  <a href="#about" className="smallTextNav">
-                    <em
-                      className="fa-1x mr-2 fas fa-laptop"
-                      style={{ cursor: "pointer" }}
-                      data-toggle="tooltip"
-                      title="About Me"
-                    ></em>
-                  </a>
-                </li>
-                <li>
-                  <a href="#myProjects" className="largeTextNav">
-                    Recent Work
-                  </a>
-                  <a href="#myProjects" className="smallTextNav">
-                    <em
-                      className="fa-1x mr-2 fas fa-briefcase"
-                      style={{ cursor: "pointer" }}
-                      data-toggle="tooltip"
-                      title="Recent Work"
-                    ></em>
-                  </a>
-                </li>
-                <li>
-                  <a href="#formBorder" className="largeTextNav">
-                    Contact
-                  </a>
-                  <a href="#formBorder" className="smallTextNav">
-                    <em
-                      className="fa-1x mr-2 fas fa-envelope-open-text"
-                      style={{ cursor: "pointer" }}
-                      data-toggle="tooltip"
-                      title="Contact Me"
-                    ></em>
-                  </a>
-                </li>
-              </ul>
+              <div className="col-9">
+                <ul className="navButton">
+                  <li>
+                    {" "}
+                    <a
+                      href="https://www.carlosjaraportfolio.com/"
+                      className="largeTextNav"
+                    >
+                      Home
+                    </a>
+                    <a
+                      href="https://www.carlosjaraportfolio.com/"
+                      className="smallTextNav"
+                    >
+                      <em
+                        className="fa-1x mr-2 fas fa-home"
+                        style={{ cursor: "pointer" }}
+                        data-toggle="tooltip"
+                        title="Home"
+                      ></em>
+                    </a>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="#about" className="largeTextNav">
+                      About
+                    </a>
+                    <a href="#about" className="smallTextNav">
+                      <em
+                        className="fa-1x mr-2 fas fa-laptop"
+                        style={{ cursor: "pointer" }}
+                        data-toggle="tooltip"
+                        title="About Me"
+                      ></em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#myProjects" className="largeTextNav">
+                      Web/Mobile App
+                    </a>
+                    <a href="#myProjects" className="smallTextNav">
+                      <em
+                        className="fa-1x mr-2 fas fa-briefcase"
+                        style={{ cursor: "pointer" }}
+                        data-toggle="tooltip"
+                        title="Recent Work"
+                      ></em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#formBorder" className="largeTextNav">
+                      Contact
+                    </a>
+                    <a href="#formBorder" className="smallTextNav">
+                      <em
+                        className="fa-1x mr-2 fas fa-envelope-open-text"
+                        style={{ cursor: "pointer" }}
+                        data-toggle="tooltip"
+                        title="Contact Me"
+                      ></em>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-
-      <HeroBanner />
+        </nav>
+      {/* NavBar End */}
+      <HeroBanner2 />
 
       <AboutMe />
 
-      <div
+      {/* <div
         className="myProjects"
         id="myProjects"
         style={{
@@ -156,14 +176,16 @@ const Portfolio = () => {
           </Nav>
         </div>
         {Project.map((project) => (
-          <ProjectWithTabs
-            project={project}
-            activeTab={activeTab}
-            key={project.id}
-          />
+        <div className="container">
+            <ProjectWithTabs
+              project={project}
+              activeTab={activeTab}
+              key={project.id}
+            />
+        </div>
         ))}
-      </div>
-      <ContactForm />
+      </div> */}
+      {/* <ContactForm /> */}
     </React.Fragment>
   );
 };

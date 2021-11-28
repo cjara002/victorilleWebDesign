@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <div className="main-wrapper">
-          <div className="AppLight">
+          <div className="AppDark">
             <Portfolio />
           </div>
         </div>

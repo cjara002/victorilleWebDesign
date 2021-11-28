@@ -15,18 +15,15 @@ class HeroBanner extends React.Component {
             }}
             id="HeroBGPhoto"
           >
-            <div className="row">
-              {/* <div className="col-1"></div> */}
-              <div className="col-6" id="heroBanner">
-                {/* <h1>CARLOS JARA</h1> */}
-                <div id="heroValuesContainer">
-                  <em id="heroArrow" className="fas fa-angle-double-left"></em>
-                  <h4 className="heroValues"> Web | Mobile | Design </h4>
-                  <em id="heroArrow" className="fas fa-angle-double-right"></em>
+            <div className="container">
+              <div className="row">
+                <div className="col" id="heroBanner">
+                  <div id="heroValuesContainer">
+                    <h3 className="heroValues">Come and Explore my</h3>
+                  </div>
+                  <h1>WEB DESIGNS</h1>
                 </div>
-                <h1>City of Angeles</h1>
               </div>
-              {/* <div className="col-6"></div> */}
             </div>
           </div>
         </div>

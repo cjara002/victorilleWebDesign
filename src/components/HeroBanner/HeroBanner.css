@@ -1,9 +1,10 @@
 /* ========================================================================
 Hero Banner Start
  ========================================================================== */
- #HeroBGPhoto {
-background-position: bottom ;
- }
+#HeroBGPhoto {
+  background-position: bottom;
+  /* width: 100%; */
+}
 
 .heroValues {
   text-transform: uppercase !important;
@@ -44,33 +45,19 @@ background-position: bottom ;
   text-shadow: -10px 10px 10px rgba(0, 0, 0, 0.9);
 }
 
-@media (max-width: 700px) {
-  /* ========================================================================
-  Hero Banner Start
-   ========================================================================== */
-   #HeroBGPhoto {
-    background-position: center ;
-     }
-
+@media screen and (max-width: 767px) {
+  #HeroBGPhoto {
+    background-position: center;
+  }
+  #heroBanner {
+    margin-top: 20%;
+    margin-bottom: 40%;
+  }
+  #heroBanner h1 {
+    font-size: 2rem;
+    letter-spacing: 0.2em !important;
+  }
   .heroValues {
     font-size: .9rem !important;
   }
-
-  #heroValuesContainer em,
-  #heroValuesContainer h4 {
-    font-size: 12px;
-    line-height: 14px;
-  }
-
-  #heroBanner {
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-
-  #heroBanner h1 {
-    font-size: 5rem;
-  }
-  /* ========================================================================
-Hero Banner End
-   ========================================================================== */
 }

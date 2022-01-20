@@ -1,68 +1,114 @@
 .about {
-    margin-top: 5%;
-    padding-top: 5%;
-  }
-  
-  .aboutFt {
-    text-align: center;
-  }
-  
+  margin-top: 5%;
+  padding-top: 5%;
+}
 
-  #verticalLine {
-    border-left: solid white;
-  }
-  
-  #emphasis {
-    font-size: 20px;
-    font: bold;
-    color: white;
-  }
+.aboutFt {
+  text-align: center;
+}
 
-  #verticalLine p{
-    font-size: 1rem;
-  }
+#verticalLine {
+  border-left: solid white;
+}
 
-  #aboutReel {
-    color: white;
-  }
-  #aboutReel:after {
-    content: "...";
-    animation: spin 13s linear infinite;
-  }
-
-  @keyframes spin {
-    10% {content: "A DEVELOPER";}
-    20% {content: "A CRITICAL THINKER";}
-    40% {content: "A TENNIS PLAYER";}
-    50% {content: "AN ARTIST";}
-    70% {content: "A PROBLEM SOLVER";}
-    80% {content: "A CHEF";}
-  } 
-
-  .carlosPhoto {
-    width:50%;
-    height: 100%;
-    border-radius: 50px;
-  }
-
-  .Resume {
-    display: inline-block;
-    padding: 10px;
-    font-size: large;
+#emphasis {
+  font-size: 20px;
+  font: bold;
   color: white;
-  text-decoration: none;
+}
+
+#verticalLine p {
+  font-size: 1rem;
+}
+
+#aboutReel {
+  color: white;
+}
+#aboutReel:after {
+  content: "...";
+  animation: spin 13s linear infinite;
+}
+
+@keyframes spin {
+  10% {
+    content: "A DEVELOPER";
   }
+  20% {
+    content: "A CRITICAL THINKER";
+  }
+  40% {
+    content: "A TENNIS PLAYER";
+  }
+  50% {
+    content: "AN ARTIST";
+  }
+  70% {
+    content: "A PROBLEM SOLVER";
+  }
+  80% {
+    content: "A CHEF";
+  }
+}
 
+.carlosPhoto {
+  width: 50%;
+  height: 100%;
+  border-radius: 50px;
+}
 
-  @media (max-width: 700px) {
-    /* ========================================================================
-AboutMe Start
-   ========================================================================== */
+.Resume {
+  color: black;
+  text-decoration: none !important;
+}
+
+.Resume:hover {
+  color: white;
+  text-decoration: none !important;
+}
+
+.butn {
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  /* color: black; */
+  letter-spacing: 1px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 16px 32px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  -webkit-transition: all linear 300ms;
+  transition: all linear 300ms;
+  border: none;
+  text-align: center;
+}
+
+.butn:hover,
+.butn:active {
+  color: #fff !important;
+  background: #1e2022;
+}
+
+@media screen and (max-width: 700px) {
   #emphasis {
-    font-size: 20px !important;
+    font-size: 16px !important;
   }
 
-  #verticalLine p{
+  .butn {
+    padding: 8px 16px;
+    font-size: 13px ;
+    /* font-weight: 300; */
+    font-size: 7px;
+  }
+
+  .aboutMeP {
+    font-size: 8px !important;
+  }
+
+  #verticalLine p {
     font-size: 1rem;
   }
 
@@ -71,9 +117,4 @@ AboutMe Start
     animation: spin 13s linear infinite;
     font-size: 40px;
   }
-
-    /* ========================================================================
-AboutMe  End
-   ========================================================================== */
-  }
-  
+}

@@ -79,6 +79,9 @@ color: black;
 
   @media (max-width: 700px) {
 
+    .projectName{
+      font-size: 20px;
+    }
     #projectInnerDetails {
       padding: 0 ;
      }
@@ -96,7 +99,7 @@ color: black;
 
     #projectLinks {
          padding: 2px;
-         font-size: small;
+         font-size: 10px;
      }
 
      #projectImageContainer:hover #details {

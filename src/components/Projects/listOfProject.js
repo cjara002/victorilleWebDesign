@@ -1,18 +1,33 @@
+import J from "./jPhoto.PNG"
+import Tennis from "./tennisHomePage.PNG"
+
 let Project = [
           {
             id: 0,
-            name: "AirBnB.Unique",
-            image: "https://bit.ly/2VOgVbG",
+            name: " J's Mobile Detailing",
+            image: J,
             description:
-              "A website were an AirBnB host can find  a reliable, local cleaner.",
-            stack: "React, Redux, HTML, CSS, C#, SQL",
-            project: "https://github.com/cjara002/AirBnB.Unique",
-            code: "https://github.com/cjara002/AirBnB.Unique",
+              "Get detailing services for your car at your finger tips.",
+            stack: "React, HTML, CSS, React Hooks",
+            project: "https://www.jsmobiledetailingca.com/",
+            code: "https://github.com/cjara002/jsdetailing",
             video: null,
             type: "web",
           },
           {
             id: 1,
+            name: "Cleaning.Unique",
+            image: "https://bit.ly/2VOgVbG",
+            description:
+              "A website were an AirBnB host can find  a reliable, local cleaner.",
+            stack: "React, Redux, HTML, CSS, C#, SQL",
+            project: null,
+            code: "https://github.com/cjara002/AirBnB.Unique",
+            video: null,
+            type: "web",
+          },
+          {
+            id: 2,
             name: "Task Tracker",
             image: "https://bit.ly/2KmRTeA",
             description:
@@ -25,7 +40,7 @@ let Project = [
             type: "web",
           },
           {
-            id: 2,
+            id: 3,
             name: "Imperio",
             image: "https://bit.ly/3amXZpW",
             description:
@@ -38,9 +53,9 @@ let Project = [
             type: "web",
           },
           {
-            id: 3,
+            id: 4,
             name: "Topsin Maxed",
-            // image: "https://bit.ly/3amXZpW",
+            image: Tennis,
             description:
               "Enable tennis players to keep track of important stats such as matches won, lost, hours played, etc.",
             stack: "React Native, CSS, AWS",
@@ -53,4 +68,4 @@ let Project = [
 
 ]
 
-module.exports = Project;
+export default Project;

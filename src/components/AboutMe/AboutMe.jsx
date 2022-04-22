@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./AboutMe.css";
 import Zoom from "react-reveal/Zoom";
 import carlosPhoto from "./CarlosWallCropped.jpg";
-import pdf from "./CarlosJaraWebDeveloper.pdf";
+import pdf from "./CarlosJaraResumeAprilResume.pdf";
 
 class AboutMe extends React.Component {
   render() {

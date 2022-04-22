@@ -1,21 +1,21 @@
 import AboutMe from "../AboutMe/AboutMe";
-// import ContactForm from "../ContactMe/ContactForm";
+import ContactForm from "../ContactMe/ContactForm";
 // import HeroBanner from "../HeroBanner/HeroBanner";
 import HeroBanner2 from "../HeroBanner/HeroBanner2";
-import React from "react";
-// import React, { useState } from "react";
+// import React from "react";
+import React, { useState } from "react";
 import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import ProjectWithTabs from "../Projects/Projects2/ProjectsWithTabs";
-// import { Nav, NavItem, NavLink } from "reactstrap";
-// import classnames from "classnames";
-// import Project from "../Projects/listOfProject";
+import ProjectWithTabs from "../Projects/Projects2/ProjectsWithTabs";
+import { Nav, NavItem, NavLink } from "reactstrap";
+import classnames from "classnames";
+import Project from "../Projects/listOfProject";
 
 const Portfolio = () => {
-  // const [activeTab, setActiveTab] = useState("1");
-  // const toggle = (tab) => {
-  //   if (activeTab !== tab) setActiveTab(tab);
-  // };
+  const [activeTab, setActiveTab] = useState("1");
+  const toggle = (tab) => {
+    if (activeTab !== tab) setActiveTab(tab);
+  };
 
   return (
     <React.Fragment>
@@ -144,7 +144,7 @@ const Portfolio = () => {
 
       <AboutMe />
 
-      {/* <div
+      <div
         className="myProjects"
         id="myProjects"
         style={{
@@ -160,7 +160,7 @@ const Portfolio = () => {
                   toggle("1");
                 }}
               >
-                Web Apps
+                <p>Web</p>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -170,22 +170,34 @@ const Portfolio = () => {
                   toggle("2");
                 }}
               >
-                Mobile First Apps
+                Mobile
               </NavLink>
             </NavItem>
           </Nav>
-        </div>
+          {/* container ends here */}
+        {/* </div> */}
         {Project.map((project) => (
-        <div className="container">
             <ProjectWithTabs
               project={project}
               activeTab={activeTab}
               key={project.id}
             />
-        </div>
         ))}
-      </div> */}
-      {/* <ContactForm /> */}
+        </div>
+      </div>
+      <ContactForm />
+      <footer className="bg-dark">
+        <div className="py-4 border-top border-color-light-white">
+          <div className="container">
+            <div className="text-center">
+              <p className="mb-0 text-white opacity9">
+                &copy; 2022-
+                CJ
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </React.Fragment>
   );
 };

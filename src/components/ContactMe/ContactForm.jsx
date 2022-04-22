@@ -71,7 +71,7 @@ class ContactForm extends React.Component {
                       </div>
 
                       <div className="row gtr-50">
-                        <div className="col-6 col-12-small">
+                        <div className="col-lg-6 col-sm-12">
                           <label className="formEmail">Email</label>
                           <input
                             required
@@ -80,8 +80,8 @@ class ContactForm extends React.Component {
                             name="email"
                           />
                         </div>
-                        <div className="col-6 col-12-small">
-                          <label className="formNumber">Phone Number</label>
+                        <div className="col-lg-6 col-sm-12">
+                          <label className="formNumber">Phone</label>
                           <input
                             required
                             type="text"

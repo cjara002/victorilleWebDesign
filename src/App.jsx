@@ -1,18 +1,16 @@
 import React from "react";
-import "./App.css";
 import Portfolio from "./components/Portfolio/Portfolio";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
         <div className="main-wrapper">
-          <div className="AppDark">
+          <div className="appDark">
             <Portfolio />
           </div>
         </div>
-      </React.Fragment>
     );
   }
 }

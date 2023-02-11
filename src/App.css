@@ -1,4 +1,9 @@
-.AppDark {
+:root {
+  --primary-black: rgba(0, 0, 0, 0.9);
+}
+
+/* TODO: Might want to remove this property */
+.appDark {
   text-align: center;
-  background-color:rgb(0, 0, 0, 0.9)
+  background-color: var(--primary-black)
 }

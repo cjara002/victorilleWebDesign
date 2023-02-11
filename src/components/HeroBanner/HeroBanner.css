@@ -1,9 +1,8 @@
 /* ========================================================================
 Hero Banner Start
  ========================================================================== */
-#HeroBGPhoto {
+#heroBGPhoto {
   background-position: bottom;
-  /* width: 100%; */
 }
 
 .heroValues {
@@ -46,7 +45,7 @@ Hero Banner Start
 }
 
 @media screen and (max-width: 767px) {
-  #HeroBGPhoto {
+  #heroBGPhoto {
     background-position: center;
   }
   #heroBanner {

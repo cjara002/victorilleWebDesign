@@ -3,7 +3,7 @@ import AboutMe from "../AboutMe/AboutMe";
 import ContactForm from "../ContactMe/ContactForm";
 import HeroBanner2 from "../HeroBanner/HeroBanner2";
 import NavBar from "../NavBar/NavBar";
-import Project from "../Projects/listOfProject";
+import projects from "../Projects/listOfProject";
 import ProjectWithTabs from "../Projects/Projects2/ProjectsWithTabs";
 import TechUsed from "../TechUsed/TechUsed";
 import { Nav, NavItem, NavLink } from "reactstrap";
@@ -26,16 +26,17 @@ const Portfolio = () => {
       <AboutMe />
 
      <TechUsed />
-     
+
       <div
         className="myProjects"
         id="myProjects"
         style={{
           backgroundImage: `url(https://bit.ly/2yJf9Ba})`,
+          backgroundSize: "cover"
         }}
       >
         <div className="container">
-          <Nav tabs>
+          <Nav tabs className="mb-5">
             <NavItem>
               <NavLink
                 className={classnames({ active: activeTab === "1" })}
@@ -53,13 +54,11 @@ const Portfolio = () => {
                   toggle("2");
                 }}
               >
-                Mobile
+                <p>Mobile-First</p>
               </NavLink>
             </NavItem>
           </Nav>
-          {/* container ends here */}
-        {/* </div> */}
-        {Project.map((project) => (
+        {projects.map((project) => (
             <ProjectWithTabs
               project={project}
               activeTab={activeTab}
@@ -68,6 +67,7 @@ const Portfolio = () => {
         ))}
         </div>
       </div>
+
       <ContactForm />
       <footer className="bg-dark">
         <div className="py-4 border-top border-color-light-white">

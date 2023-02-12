@@ -1,6 +1,6 @@
 import React from "react";
 import carlosPhoto from "../Helper/CarlosWallCropped.jpg";
-import pdf from "./CarlosJaraResumeAprilResume.pdf";
+import pdf from "../Helper/CarlosJaraResume2023.pdf";
 import Zoom from "react-reveal/Zoom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AboutMe.css";
@@ -22,20 +22,19 @@ class AboutMe extends React.Component {
                     </h1>
                   </div>
                   <p className="aboutMeP">
-                    <span id="emphasis">I</span> strive to provide quality work
-                    by staying on top of deadlines, cooperating effectively with
-                    my team, demonstrating flexibility, and resolving issues
-                    that may hinder progress. I want to join a team that is
-                    currently disrupting an industry.
+                    <span id="emphasis">I</span> am a full-stack developer who constantly challenges myself both
+                     in work and in my personal life. I have a passion for cooking, app development, and home renovation
+                     projects. Additionally, I have been playing tennis for over 10 years and have honed my skills with a
+                    heavy topspin forehand.
                     <br />
-                    <span id="emphasis">I</span> want to be in an environment
-                    that can bring various challenges, as I know this will shape
-                    who I am as a person and who I am as a developer.
+                    <br />
+                    <span id="emphasis">Currently,</span> I am expanding my knowledge by learning LINQ, AWS, and how to use
+                     Google Sheets for budgeting. I have a goal to build a shed in my backyard in the near future.
                   </p>
                   <div className="overflow-hidden w-95 w-md-85 w-lg-80">
                     <button className="butn">
-                      <a href={pdf} target="/" className="Resume">
-                        View Resume{" "}
+                      <a href={pdf} target="/" download className="Resume">
+                        Download Resume{" "}
                       </a>{" "}
                     </button>
                   </div>
@@ -46,7 +45,7 @@ class AboutMe extends React.Component {
                 <div className="col-lg-6 d-none d-sm-block" id="verticalLine">
                   <img
                     src={carlosPhoto}
-                    alt="carlosPhoto"
+                    alt="Profile of Carlos Jara"
                     className="carlosPhoto"
                   />
                 </div>

@@ -68,27 +68,6 @@ nav ul a:hover {
   display: none;
 }
 
-.fName {
-  font-family: 'Great Vibes', cursive;
-  padding: 5px;
-  font-size: 1.5em;
-  color: white;
-  position: relative;
-}
-.lName {
-  font-family: 'Great Vibes', cursive;
-  padding: 5px;
-  font-size: 1.5em;
-  color: white;
-  position: relative;
-}
-
-.slashBar{
-  font-family: 'Great Vibes', cursive;
-  /* padding: 2.5px; */
-  font-size: 2em;
-}
-
 /* ========================================================================
 Portfolio Nav Bar End
  ========================================================================== */

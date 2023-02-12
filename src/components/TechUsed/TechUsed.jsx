@@ -1,8 +1,9 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import expierence from "./Technology";
-import "./TechUsed.css";
+import images from "../Helper/Images.js";
+import expierence from "../Helper/Technology";
 import Roll from "react-reveal/Roll";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./TechUsed.css";
 
 class TechUsed extends React.Component {
   state = {
@@ -17,18 +18,20 @@ class TechUsed extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
+      <div className="screen-height"> 
         <div
-          className="techUsed"
+          className="techUsed item bg-img h-100 cover-background"
+          data-overlay-dark="6"
           id="techUsed"
           style={{
-            backgroundImage: `url(https://bit.ly/2yJf9Ba})`,
+            backgroundImage: `url(${images.londonNight})`,
             color: `white`,
+            backgroundSize: 'cover'
           }}
         >
           <div className="container">
-            <h1>Technology</h1>
-            <br />
+            <h1 className="mb-5">Skills</h1>
             <div className="row">
               {this.state.techUsed.map((tech) => (
                 <Roll top>
@@ -38,7 +41,7 @@ class TechUsed extends React.Component {
                         <div className="col">
                           <div className="text-center card-body">
                             <img
-                              className=" mb-2 rounded-circle-thumb32"
+                              className="mb-2 rounded-circle-thumb32"
                               src={tech.image}
                               alt="Tech"
                               id="techPhoto"
@@ -57,7 +60,8 @@ class TechUsed extends React.Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+        </div>
+      </>
     );
   }
 }

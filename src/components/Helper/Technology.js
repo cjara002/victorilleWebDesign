@@ -1,4 +1,4 @@
-let expierence = [
+const expierence = [
   { 
     id: 0,
     tech: "React",
@@ -25,8 +25,8 @@ let expierence = [
   },
   { 
     id: 5, 
-    tech: "Illustrator", 
-    image: "https://bit.ly/2UkI6v6", 
+    tech: "Entity Framework Core", 
+    image: "https://bit.ly/3jOiDda", 
   },
   { 
     id: 6, 
@@ -36,7 +36,7 @@ let expierence = [
   { 
     id: 7, 
     tech: "C#", 
-    image: "https://bit.ly/2BNbiER", 
+    image: "https://bit.ly/3K5nrWi", 
   },
   { 
     id: 8, 
@@ -55,8 +55,8 @@ let expierence = [
   },
   { 
     id: 11, 
-    tech: "Redux", 
-    image: "https://bit.ly/2BLVORm", 
+    tech: "Azure", 
+    image: "https://bit.ly/3jPCEQy", 
   },
 ];
 

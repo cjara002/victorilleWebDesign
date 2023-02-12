@@ -5,6 +5,7 @@ import HeroBanner2 from "../HeroBanner/HeroBanner2";
 import NavBar from "../NavBar/NavBar";
 import Project from "../Projects/listOfProject";
 import ProjectWithTabs from "../Projects/Projects2/ProjectsWithTabs";
+import TechUsed from "../TechUsed/TechUsed";
 import { Nav, NavItem, NavLink } from "reactstrap";
 import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,6 +25,8 @@ const Portfolio = () => {
 
       <AboutMe />
 
+     <TechUsed />
+     
       <div
         className="myProjects"
         id="myProjects"

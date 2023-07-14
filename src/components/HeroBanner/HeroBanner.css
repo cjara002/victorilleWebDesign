@@ -3,6 +3,7 @@ Hero Banner Start
  ========================================================================== */
 #heroBGPhoto {
   background-position: bottom;
+  background-size: cover;
 }
 
 .heroValues {
@@ -26,7 +27,7 @@ Hero Banner Start
   margin-top: 10%;
   margin-bottom: 20%;
   color: white;
-  text-shadow: -20px 20px 20px rgba(0, 0, 0, 0.9);
+  text-shadow: -20px 20px 20px rgba(0, 0, 0, 0.9); 
 }
 
 #heroBanner h1 {

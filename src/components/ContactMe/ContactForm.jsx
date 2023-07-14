@@ -3,7 +3,6 @@ import "./ContactStyle.css";
 import { Button } from "reactstrap";
 // import Github from "./Github.png";
 // import LinkedIn from "./LinkedIn.png";
-import Fade from "react-reveal/Fade";
 
 class ContactForm extends React.Component {
   state = {
@@ -39,7 +38,6 @@ class ContactForm extends React.Component {
           }}
           id="contactBorder"
         >
-          <Fade bottom>
             <div className="row block-center mt-4 " id="formBorder">
               <div className="col">
                 <div className="card-default card " id="formContainer">
@@ -161,7 +159,6 @@ class ContactForm extends React.Component {
                 </div>
               </div> */}
             </div>
-          </Fade>
         </div>
       </React.Fragment>
     );

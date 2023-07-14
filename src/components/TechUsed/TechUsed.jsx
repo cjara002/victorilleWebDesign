@@ -1,7 +1,6 @@
 import React from "react";
 import images from "../Helper/Images.js";
 import expierence from "../Helper/Technology";
-import Roll from "react-reveal/Roll";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./TechUsed.css";
 
@@ -34,7 +33,6 @@ class TechUsed extends React.Component {
             <h1 className="mb-5">Skills</h1>
             <div className="row">
               {this.state.techUsed.map((tech) => (
-                <Roll top>
                   <div className="col-4">
                     <div className="card-default card" id="borderTech">
                       <div className="row">
@@ -55,7 +53,6 @@ class TechUsed extends React.Component {
                     </div>
                     <br />
                   </div>
-                </Roll>
               ))}
             </div>
           </div>

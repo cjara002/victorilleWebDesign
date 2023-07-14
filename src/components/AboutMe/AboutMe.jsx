@@ -1,7 +1,6 @@
 import React from "react";
 import carlosPhoto from "../Helper/CarlosWallCropped.jpg";
 import pdf from "../Helper/CarlosJaraResume2023.pdf";
-import Zoom from "react-reveal/Zoom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AboutMe.css";
 
@@ -12,7 +11,6 @@ class AboutMe extends React.Component {
         <div className="about text-muted" id="about">
           <div className="container">
             <div className="row">
-              <Zoom right>
                 <div className="col-lg-6 col-sm-12">
                   <h4 className="mb-3">About Me</h4>
                   <div className="aboutFt">
@@ -39,9 +37,7 @@ class AboutMe extends React.Component {
                     </button>
                   </div>
                 </div>
-              </Zoom>
 
-              <Zoom left>
                 <div className="col-lg-6 d-none d-sm-block" id="verticalLine">
                   <img
                     src={carlosPhoto}
@@ -49,7 +45,6 @@ class AboutMe extends React.Component {
                     className="carlosPhoto"
                   />
                 </div>
-              </Zoom>
             </div>
           </div>
         </div>

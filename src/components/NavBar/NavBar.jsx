@@ -1,6 +1,7 @@
 import React from "react";
 import NavButton from "./NavButton";
 import urls from "../Helper/Urls";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -44,17 +45,25 @@ const NavBar = () => {
             <ul className="navButton">
               <li>
                 {" "}
-                <NavButton
-                  href={urls.portfolio}
+                <Link to="/" className="largeTextNav">
+                  Home
+                </Link>
+
+                <Link to="/" className="smallTextNav">
+                  <i className="fa-1x mr-2 fas fa-home"></i>
+                </Link>
+
+                {/* <NavButton
+                  href="/"
                   textSize="largeTextNav"
                   text="Home"
                 />
                 <NavButton
-                  href={urls.portfolio}
+                  href="/"
                   title="Home"
                   textSize="smallTextNav"
                   iconClass= "fa-1x mr-2 fas fa-home"
-                />
+                /> */}
               </li>
               <li>
                 {" "}

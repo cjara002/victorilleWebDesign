@@ -1,86 +1,31 @@
-import React, { useState } from "react";
-import AboutMe from "../AboutMe/AboutMe";
-import ContactForm from "../ContactMe/ContactForm";
-import HeroBanner2 from "../HeroBanner/HeroBanner2";
+import React from "react";
+import Home from "../Home/Home";
 import NavBar from "../NavBar/NavBar";
-import projects from "../Projects/listOfProject";
-import ProjectWithTabs from "../Projects/Projects2/ProjectsWithTabs";
-import TechUsed from "../TechUsed/TechUsed";
-import { Nav, NavItem, NavLink } from "reactstrap";
+import ProjectDetails from "../Projects/Projects2/ProjectDetails";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import classnames from "classnames";
+// import images from "../Helper/Images.js";
 
 const Portfolio = () => {
-  const [activeTab, setActiveTab] = useState("1");
-  const toggle = (tab) => {
-    if (activeTab !== tab) setActiveTab(tab);
-  };
-
   return (
     <>
-      <NavBar />
-
-      <HeroBanner2 />
-
-      <AboutMe />
-
-     <TechUsed />
-
-      <div
-        className="myProjects"
-        id="myProjects"
-        style={{
-          backgroundImage: `url(https://bit.ly/2yJf9Ba})`,
-          backgroundSize: "cover"
-        }}
-      >
-        <div className="container">
-          <Nav tabs className="mb-5">
-            <NavItem>
-              <NavLink
-                className={classnames({ active: activeTab === "1" })}
-                onClick={() => {
-                  toggle("1");
-                }}
-              >
-                <p>Web</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: activeTab === "2" })}
-                onClick={() => {
-                  toggle("2");
-                }}
-              >
-                <p>Mobile-First</p>
-              </NavLink>
-            </NavItem>
-          </Nav>
-        {projects.map((project) => (
-            <ProjectWithTabs
-              project={project}
-              activeTab={activeTab}
-              key={project.id}
-            />
-        ))}
-        </div>
-      </div>
-
-      <ContactForm />
-      <footer className="bg-dark">
-        <div className="py-4 border-top border-color-light-white">
-          <div className="container">
-            <div className="text-center">
-              <p className="mb-0 text-white opacity9">
-                &copy; 2022-
-                CJ
-              </p>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/details/:id" element={<ProjectDetails />} />
+        </Routes>
+        <footer className="bg-dark">
+          <div className="py-4 border-top border-color-light-white">
+            <div className="container">
+              <div className="text-center">
+                <p className="mb-0 text-white opacity9">&copy; 2022- CJ</p>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </Router>
     </>
   );
 };

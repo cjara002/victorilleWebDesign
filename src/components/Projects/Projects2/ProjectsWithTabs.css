@@ -1,7 +1,16 @@
+:root {
+  --baby-blue: #9ab2cb;
+  --grey: #52698a;
+  --white: #d7e7f2;
+  --dark-blue: #123b74;
+  --emerald-green: #046307;
+  --light-green: #0A8B0A;
+}
 
 .myProjects {
   margin-top: 5%;
   padding-top: 5%;
+  background-color: var(--white);
 }
 
 #cardBottomBorder {

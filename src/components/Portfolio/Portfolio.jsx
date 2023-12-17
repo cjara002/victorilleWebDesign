@@ -5,7 +5,6 @@ import ProjectDetails from "../Projects/Projects2/ProjectDetails";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./Portfolio.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import images from "../Helper/Images.js";
 
 const Portfolio = () => {
   return (

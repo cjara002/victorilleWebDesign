@@ -1,9 +1,14 @@
 :root {
-  --primary-black: rgba(0, 0, 0, 0.9);
+  --baby-blue: #9ab2cb;
+  --grey: #52698a;
+  --white: #d7e7f2;
+  --dark-blue: #123b74;
+  --emerald-green: #046307;
+  --light-green: #0A8B0A;
 }
 
 /* TODO: Might want to remove this property */
 .appDark {
   text-align: center;
-  background-color: var(--primary-black)
+  background-color: var(--white)
 }

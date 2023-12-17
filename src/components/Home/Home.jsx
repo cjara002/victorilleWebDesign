@@ -7,7 +7,7 @@ import ProjectWithTabs from "../Projects/Projects2/ProjectsWithTabs";
 import TechUsed from "../TechUsed/TechUsed";
 import { Nav, NavItem, NavLink } from "reactstrap";
 import classnames from "classnames";
-import images from "../Helper/Images.js";
+import businessBackground from "../Helper/images/laptop.jpg";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("1");
@@ -15,18 +15,22 @@ const Home = () => {
     if (activeTab !== tab) setActiveTab(tab);
   };
 
+   
   const HeroBannerText = (
     <div className="col" id="heroBanner">
+    <h1>TRANSFORM</h1>
     <div id="heroValuesContainer">
-      <h3 className="heroValues">Come and Explore my</h3>
+      <h2 className="heroValues"> your Ideas Into Exceptional Web Experiences</h2>
     </div>
-    <h1>WEB DESIGNS</h1>
+    <button className="butn">
+    Get In Touch to Learn More{" "}
+                    </button>
   </div>
   )
 
   return (
     <>
-      <HeroBanner2 image={images.lion} heroBannerText={HeroBannerText}/>
+      <HeroBanner2 image={businessBackground} heroBannerText={HeroBannerText}/>
 
       <AboutMe />
 
@@ -35,12 +39,9 @@ const Home = () => {
       <div
         className="myProjects"
         id="myProjects"
-        style={{
-          backgroundImage: `url(https://bit.ly/2yJf9Ba})`,
-          backgroundSize: "cover",
-        }}
       >
         <div className="container">
+          <h1>White Label Websites</h1>
           <Nav tabs className="mb-5">
             <NavItem>
               <NavLink

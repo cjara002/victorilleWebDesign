@@ -6,18 +6,28 @@ import { Button } from "reactstrap";
 
 class ContactForm extends React.Component {
   state = {
-    firstName: " ",
-    lastName: " ",
-    email: " ",
-    phone: " ",
-    message: " ",
+    form: {
+      firstName: " ",
+      lastName: " ",
+      website: " ",
+      email: " ",
+      phone: " ",
+      message: "",
+      freeGift: ""},
+    errors: {
+      firstName: " ",
+      lastName: " ",
+      email: " ",
+      phone: " ",
+      message: "",
+    }
   };
 
   handleSubmit = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encodeURI({ "form-name": "contact", ...this.state }),
+      body: encodeURI({ "form-name": "contact", ...this.state.form }),
     })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
@@ -26,6 +36,49 @@ class ContactForm extends React.Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
+  };
+
+  validateForm = () => {
+    let isValid = true;
+    let errors = {};
+
+  // Validate firstName
+  if (!this.state.firstName.trim()) {
+    errors.firstName = 'First name cannot be empty';
+    isValid = false;
+  }
+
+  // Validate lastName
+  if (!this.state.lastName.trim()) {
+    errors.lastName = 'Last name cannot be empty';
+    isValid = false;
+  }
+  // Validate email
+  if (!this.state.email.trim()) {
+    errors.email = 'Email cannot be empty';
+    isValid = false;
+  } else if (!this.state.email.includes('@')) {
+    errors.email = 'Invalid email address';
+    isValid = false;
+  }
+
+  // Validate phone
+  if (!this.state.phone.trim()) {
+    errors.phone = 'Phone cannot be empty';
+    isValid = false;
+  } else if (!/^\d+$/.test(this.state.phone)) {
+    errors.phone = 'Phone number must contain only digits';
+    isValid = false;
+  }
+
+    // Validate message
+    if (!this.state.message.trim()) {
+      errors.message = 'Message cannot be empty';
+      isValid = false;
+    }
+
+    this.setState({ errors });
+    return isValid;
   };
 
   render() {
@@ -42,12 +95,13 @@ class ContactForm extends React.Component {
               <div className="col">
                 <div className="card-default card " id="formContainer">
                   <div className="card-body">
-                    <h1 className="formHeader"> Request a free quote</h1>
+                    <h1 className="formHeader">Get Your Free Quote Today!</h1>
                     <p className="formp">
-                      If you need a website built, please feel free to contact
-                      me. I am always interested in helping out a fellow
-                      developer as well. <br /> Hablo Español.
+                      Ready to create an exceptional website? Contact me now for 
+                      expert design and development services.
+                      <br /> ¡Hablo Español!
                     </p>
+
                     <form
                       method="POST"
                       name="contact"
@@ -58,7 +112,7 @@ class ContactForm extends React.Component {
                       <div className="row gtr-50">
                         <input type="hidden" name="form-name" value="contact" />
                         <div className="col-6 col-12">
-                          <label className="formName"> Name</label>
+                          <label className="formName">Name*</label>
                           <input
                             required
                             type="text"
@@ -70,7 +124,7 @@ class ContactForm extends React.Component {
 
                       <div className="row gtr-50">
                         <div className="col-lg-6 col-sm-12">
-                          <label className="formEmail">Email</label>
+                          <label className="formEmail">Email*</label>
                           <input
                             required
                             type="email"
@@ -79,7 +133,7 @@ class ContactForm extends React.Component {
                           />
                         </div>
                         <div className="col-lg-6 col-sm-12">
-                          <label className="formNumber">Phone</label>
+                          <label className="formNumber">Phone*</label>
                           <input
                             required
                             type="text"
@@ -89,8 +143,19 @@ class ContactForm extends React.Component {
                         </div>
                       </div>
 
+                      <div className="row gtr-50">
+                        <div className="col-6 col-12">
+                          <label className="formName">Website</label>
+                          <input
+                            type="text"
+                            className="form-control-rounded form-control"
+                            name="website"
+                          />
+                        </div>
+                      </div>
+
                       <div className="position-relative form-group">
-                        <label className="formMessage">Message</label>
+                        <label className="formMessage">Message*</label>
                         <textarea
                           required
                           name="message"

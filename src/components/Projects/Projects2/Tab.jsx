@@ -1,6 +1,6 @@
 import React from "react";
 import { TabPane, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Tab = (props) => {
   return (
@@ -24,17 +24,17 @@ const Tab = (props) => {
                         <h1 className="projectName">
                           <strong>{props.project.name}</strong>
                         </h1>
-                        <p>
-                          <span className="text-lg">Technology:</span>{" "}
-                          {props.project.stack}
-                        </p>
                         <p>{props.project.description}</p>
-                        <div className="float-center">
-
-                          <button className="butn">
-                            <Link to={`/details/${props.project.id}`} className="Resume">View More</Link>
+                        <div className="float-center" >
+                            {props.project.isActive? 
+                                                    <button className="butn" style={{ marginRight: '10px' }}>
+                                                    <a  target="_blank" rel="noopener noreferrer" href={props.project.project}>View Demo</a>
+                                                  </button>
+                            :  ""}
+                          <button className="butn-secondary">
+                            <a  target="_blank" rel="noopener noreferrer" href={props.project.project}>Free consultaion</a>
                           </button>
-                        </div>
+                        </div> 
                       </div>
                     </div>
                   </div>

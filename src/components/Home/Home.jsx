@@ -42,7 +42,7 @@ const Home = () => {
       >
         <div className="container">
           <h1>White Label Websites</h1>
-          <Nav tabs className="mb-5">
+          <Nav tabs className="mb-3">
             <NavItem>
               <NavLink
                 className={classnames({ active: activeTab === "1" })}

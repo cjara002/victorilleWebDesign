@@ -19,7 +19,7 @@ const Portfolio = () => {
           <div className="py-4 border-top border-color-light-white">
             <div className="container">
               <div className="text-center">
-                <p className="mb-0 text-white opacity9">&copy; 2022- CJ</p>
+                <p className="mb-0 text-white opacity9">&copy; 2023 - Victorville Web Design</p>
               </div>
             </div>
           </div>

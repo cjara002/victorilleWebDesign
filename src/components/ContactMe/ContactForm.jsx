@@ -1,22 +1,20 @@
 import React from "react";
 import "./ContactStyle.css";
 import { Button } from "reactstrap";
-// import Github from "./Github.png";
-// import LinkedIn from "./LinkedIn.png";
+import InputMask from 'react-input-mask';
 
 class ContactForm extends React.Component {
   state = {
     form: {
-      firstName: " ",
-      lastName: " ",
+      name: " ",
+      // lastName: " ",
       website: " ",
       email: " ",
       phone: " ",
       message: "",
       freeGift: ""},
     errors: {
-      firstName: " ",
-      lastName: " ",
+      name: " ",
       email: " ",
       phone: " ",
       message: "",
@@ -24,60 +22,70 @@ class ContactForm extends React.Component {
   };
 
   handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encodeURI({ "form-name": "contact", ...this.state.form }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
     e.preventDefault();
+    if(this.validateForm())
+    {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeURI({ "form-name": "contact", ...this.state.form }),
+      })
+        .then(() => alert("Success!"))
+        .catch((error) => alert(error));
+    }
+    else {
+      alert("Please correct the errors in the form");
+    }
   };
 
   handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    this.setState(prevState => ({
+      form: {
+        ...prevState.form, // Spread existing state
+        [name]: value       // Update the specific field
+      }
+    }));
   };
 
   validateForm = () => {
     let isValid = true;
     let errors = {};
 
-  // Validate firstName
-  if (!this.state.firstName.trim()) {
-    errors.firstName = 'First name cannot be empty';
-    isValid = false;
-  }
-
-  // Validate lastName
-  if (!this.state.lastName.trim()) {
-    errors.lastName = 'Last name cannot be empty';
+  // Validate name
+  if (!this.state.form.name?.trim()) {
+    console.log("no name")
+    errors.name = 'Name cannot be empty';
     isValid = false;
   }
   // Validate email
-  if (!this.state.email.trim()) {
+  if (!this.state.form.email?.trim()) {
     errors.email = 'Email cannot be empty';
     isValid = false;
-  } else if (!this.state.email.includes('@')) {
+  } else if (!this.state.form.email.includes('@')) {
     errors.email = 'Invalid email address';
     isValid = false;
   }
 
-  // Validate phone
-  if (!this.state.phone.trim()) {
-    errors.phone = 'Phone cannot be empty';
-    isValid = false;
-  } else if (!/^\d+$/.test(this.state.phone)) {
-    errors.phone = 'Phone number must contain only digits';
-    isValid = false;
-  }
+// Validate phone
+const phone = this.state.form.phone?.replace(/-/g, ''); 
+if (!phone?.trim()) {
+  errors.phone = 'Phone cannot be empty';
+  isValid = false;
+} else if (!/^\d{10}$/.test(phone)) {
+  errors.phone = 'Phone number must be 10 digits';
+  isValid = false;
+}
 
     // Validate message
-    if (!this.state.message.trim()) {
+    if (!this.state.form.message?.trim()) {
       errors.message = 'Message cannot be empty';
       isValid = false;
     }
 
+    console.log("validateForm:", this.state.form)
     this.setState({ errors });
+    console.log("validateForm-erros:", this.state.errors)
     return isValid;
   };
 
@@ -101,77 +109,7 @@ class ContactForm extends React.Component {
                       expert design and development services.
                       <br /> ¡Hablo Español!
                     </p>
-
-                    <form
-                      method="POST"
-                      name="contact"
-                      action="/success/"
-                      id="formContact"
-                      data-netlify="true"
-                    >
-                      <div className="row gtr-50">
-                        <input type="hidden" name="form-name" value="contact" />
-                        <div className="col-6 col-12">
-                          <label className="formName">Name*</label>
-                          <input
-                            required
-                            type="text"
-                            className="form-control-rounded form-control"
-                            name="name"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="row gtr-50">
-                        <div className="col-lg-6 col-sm-12">
-                          <label className="formEmail">Email*</label>
-                          <input
-                            required
-                            type="email"
-                            className="form-control-rounded form-control"
-                            name="email"
-                          />
-                        </div>
-                        <div className="col-lg-6 col-sm-12">
-                          <label className="formNumber">Phone*</label>
-                          <input
-                            required
-                            type="text"
-                            className="form-control-rounded form-control"
-                            name="phone"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="row gtr-50">
-                        <div className="col-6 col-12">
-                          <label className="formName">Website</label>
-                          <input
-                            type="text"
-                            className="form-control-rounded form-control"
-                            name="website"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="position-relative form-group">
-                        <label className="formMessage">Message*</label>
-                        <textarea
-                          required
-                          name="message"
-                          defaultValue={""}
-                          className="form-control form-control"
-                        />
-                      </div>
-
-                      <Button className="btn btn-secondary" type="submit">
-                        Send Message
-                      </Button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              {/* <div className="col-6">
+                    <div className="col-6">
                 <div className="row gtr-50">
                   <div className="col-6 col-12-small">
                     <label><b>Email</b></label>
@@ -182,47 +120,92 @@ class ContactForm extends React.Component {
                     <p>(626) 539-4396 </p>
                   </div>
                 </div>
+              </div>
 
-                <div className="row gtr-50">
-                  <div className="col-6 col-12-small">
-                    <label><b>Social</b></label>
-                    <ul>
-                      <li className="iconSocial">
-                        <a
-                          href="https://github.com/cjara002"
-                          data-toggle="tooltip"
-                          title="GitHub"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src={Github}
-                            className="img-responsive"
-                            alt="github"
-                            id="imageSocial"
-                          ></img>
-                        </a>
-                      </li>
-                      <li className="iconSocial">
-                        <a
-                          href="https://linkedin.com/in/carlos-j-jara"
-                          data-toggle="tooltip"
-                          title="LinkedIn"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src={LinkedIn}
-                            className="img-responsive"
-                            alt="linkedin"
-                            id="imageSocial"
-                          ></img>
-                        </a>
-                      </li>
-                    </ul>
+                    <form
+                      method="POST"
+                      name="contact"
+                      action="/success/"
+                      id="formContact"
+                      data-netlify="true"
+                      onSubmit={this.handleSubmit} 
+                    >
+                      <div className="row gtr-50">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div className="col-6 col-12">
+                          <label className="formName">Name*</label>
+                          <input
+                            // required
+                            type="text"
+                            className="form-control-rounded form-control"
+                            name="name"
+                            onChange={this.handleChange}
+                            value={this.state.form.name}
+                          />
+                           {this.state.errors.name && <p className="error">{this.state.errors.name}</p>}
+                        </div>
+                      </div>
+
+                      <div className="row gtr-50">
+                        <div className="col-lg-6 col-sm-12">
+                          <label className="formEmail">Email*</label>
+                          <input
+                            // required
+                            type="email"
+                            className="form-control-rounded form-control"
+                            name="email"
+                            onChange={this.handleChange}
+                            value={this.state.form.email}
+                          />
+                           {this.state.errors.email && <p className="error">{this.state.errors.email}</p>}
+                        </div>
+                        <div className="col-lg-6 col-sm-12">
+                          <label className="formNumber">Phone*</label>
+                          <InputMask
+                            mask="999-999-9999"
+                            className="form-control-rounded form-control"
+                            name="phone"
+                            onChange={this.handleChange}
+                            value={this.state.form.phone}
+                            placeholder="123-456-7890"
+                          />
+                           {this.state.errors.phone && <p className="error">{this.state.errors.phone}</p>}
+                        </div>
+                      </div>
+
+                      <div className="row gtr-50">
+                        <div className="col-6 col-12">
+                          <label className="formName">Website</label>
+                          <input
+                            type="text"
+                            className="form-control-rounded form-control"
+                            name="website"
+                            onChange={this.handleChange}
+                            value={this.state.form.website}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="position-relative form-group">
+                        <label className="formMessage">Message*</label>
+                        <textarea
+                          // required
+                          name="message"
+                          defaultValue={""}
+                          className="form-control form-control"
+                          onChange={this.handleChange}
+                          value={this.state.form.message}
+                        />
+                         {this.state.errors.message && <p className="error">{this.state.errors.message}</p>}
+                      </div>
+
+                      <Button className="btn btn-secondary" type="submit">
+                        Send Message
+                      </Button>
+                    </form>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
         </div>
       </React.Fragment>

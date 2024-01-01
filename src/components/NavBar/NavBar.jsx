@@ -2,7 +2,7 @@ import React from "react";
 import NavButton from "./NavButton";
 import urls from "../Helper/Urls";
 import Colors from "../../Colors";
-// import { Link } from "react-router-dom";
+import Logo from "../Helper/images/victorvilleWebInnovationsLogo.png"
 
 const navItems = [
     //TODOCARLOS: Update URLs on the href
@@ -15,16 +15,13 @@ const navItems = [
   { href: urls.formBorder, title: "Let's Connect", iconClass: "fas fa-envelope-open-text", isExternal: false },
 ];
 
-
-
-
 const NavBar = () => {
   return (
     <nav id="navOverEverything" style={{ backgroundColor: Colors.darkBlue }}>
       <div className="container">
         <div className="row">
           <div className="col-3">
-            <ul>
+            {/* <ul>
               {navItems.slice(0, 3).map((item) => (
                 <li key={item.title}>
                   <NavButton
@@ -36,7 +33,21 @@ const NavBar = () => {
                   />
                 </li>
               ))}
-            </ul>
+            </ul> */}
+             <div
+                      className="navbar-header navbar-header-custom"
+                    >
+                      <a
+                        href="/"
+                        className="navbar-brand xs-width-145px d-inline-block mr-lg-0"
+                      >
+                        <img
+                          src={Logo}
+                          alt="Victorville Web Innovations Logo"
+                          style={{ maxHeight: "100%", height: "50px", borderRadius: "20px" }}
+                        />
+                      </a>
+                    </div>
           </div>
           <div className="col-9">
             <ul className="navButton">

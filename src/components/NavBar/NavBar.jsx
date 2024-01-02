@@ -1,21 +1,30 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import NavButton from "./NavButton";
-import urls from "../Helper/Urls";
 import Colors from "../../Colors";
 import Logo from "../Helper/images/victorvilleWebInnovationsLogo.png"
-
-const navItems = [
-    //TODOCARLOS: Update URLs on the href
-  { href: urls.github, title: "Facebook", iconClass: "fab fa-facebook", isExternal: true },
-  { href: urls.linkedin, title: "Yelp", iconClass: "fab fa-yelp", isExternal: true },
-  { href: urls.linkedin, title: "Instagram", iconClass: "fab fa-instagram", isExternal: true },
-  { href: "/", title: "Home", iconClass: "fas fa-home", isExternal: false },
-  { href: urls.about, title: "About Me", iconClass: "fas fa-laptop", isExternal: false },
-  { href: urls.myProjects, title: "Web/Mobile App", iconClass: "fas fa-briefcase", isExternal: false },
-  { href: urls.formBorder, title: "Let's Connect", iconClass: "fas fa-envelope-open-text", isExternal: false },
-];
+import navItems from "../Helper/navigationItems";
 
 const NavBar = () => {
+
+  const [activeLink, setActiveLink] = useState('home');
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    }
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [])
+
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
+  }
+  
   return (
     <nav id="navOverEverything" style={{ backgroundColor: Colors.darkBlue }}>
       <div className="container">
@@ -52,10 +61,9 @@ const NavBar = () => {
           <div className="col-9">
             <ul className="navButton">
               {navItems.slice(3).map((item) => (
-                <li key={item.title}>
+                <li key={item.id}>
                   <NavButton
                     href={item.href}
-                    textSize="textNav"
                     text={item.title}
                     iconClass={item.iconClass}
                     isExternal={item.isExternal}

@@ -1,18 +1,19 @@
 import React from "react";
 
-const NavButton = ({ href, title, textSize, iconClass, isExternal }) => {
+  const NavButton = ({ href, text, iconClass, isExternal }) => {
+  console.log("NavButton:", text)
   return (
     <a
       href={href}
       style={{ cursor: "pointer" }}
       data-toggle="tooltip"
-      title={title}
+      // title={text}
       target={isExternal ? "_blank" : "_self"}
       rel={isExternal ? "noopener noreferrer" : ""}
-      className={textSize}
     >
-      {/* <i className={iconClass}></i> {title} */}
-      <i className={iconClass}></i>
+      <i className={iconClass}></i> {text}
+      {/* <p className="d-none">{text}</p> */}
+
     </a>
   );
 }

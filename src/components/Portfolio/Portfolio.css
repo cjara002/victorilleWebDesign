@@ -17,6 +17,11 @@ Portfolio Nav Bar Start
   position: sticky;
 }
 
+nav.scrolled {
+  padding: 0px 0;
+  background-color: #121212;
+}
+
 nav ul {
   list-style: none;
   color: white;
@@ -62,6 +67,20 @@ nav ul a:hover::after {
 nav ul a:hover {
   color: white;
   text-decoration: none;
+}
+
+.navbar-link {
+  font-weight: 400;
+  color: #2c2a2a !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+.navbar-link:hover,
+.navbar-link.active {
+    opacity: 1;
+    color: white !important;
 }
 
 .smallTextNav {

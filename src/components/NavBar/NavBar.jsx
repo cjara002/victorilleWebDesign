@@ -3,10 +3,11 @@ import NavButton from "./NavButton";
 import Colors from "../../Colors";
 import Logo from "../Helper/images/victorvilleWebInnovationsLogo.png"
 import navItems from "../Helper/navigationItems";
+import { HashLink } from 'react-router-hash-link';
 
 const NavBar = () => {
 
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState('Home');
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,11 +23,12 @@ const NavBar = () => {
   }, [])
 
   const onUpdateActiveLink = (value) => {
+    console.log("onUpdateActiveLink:", value)
     setActiveLink(value);
   }
-  
+
   return (
-    <nav id="navOverEverything" style={{ backgroundColor: Colors.darkBlue }}>
+    <nav id="navOverEverything" style={{ backgroundColor: Colors.darkBlue }} className={scrolled ? "scrolled" : ""}>
       <div className="container">
         <div className="row">
           <div className="col-3">
@@ -66,10 +68,14 @@ const NavBar = () => {
                     href={item.href}
                     text={item.title}
                     iconClass={item.iconClass}
-                    isExternal={item.isExternal}
+                    activeLink={activeLink === item.title ? 'active navbar-link' : 'navbar-link'}
+                    onUpdateActiveLink={onUpdateActiveLink}
                   />
                 </li>
               ))}
+                <HashLink to='#contactBorder'>
+                <button className="butn vvd"><span>Let’s Connect</span></button>
+              </HashLink>
             </ul>
           </div>
         </div>

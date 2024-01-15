@@ -5,6 +5,7 @@ import Logo from "../Helper/images/victorvilleWebInnovationsLogo.png"
 import navItems from "../Helper/navigationItems";
 import { HashLink } from 'react-router-hash-link';
 import { slide as Menu } from 'react-burger-menu';
+import Hamburger from "../Helper/images/hamburgerWhite.png"
 
 const NavBar = () => {
 
@@ -43,10 +44,13 @@ const NavBar = () => {
     bmBurgerButton: {
       position: 'fixed',
       width: '36px',
-      height: '15px',
-      right: '36px',
-      top: '36px',
-      backgroundColor: Colors.darkBlue
+      height: '30px',
+      right: '15px',
+      top: '15px',
+      backgroundImage: `url(${Hamburger})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      zIndex: 100
     }
   }
 
@@ -102,10 +106,12 @@ const NavBar = () => {
             </ul>
           {isMobile && (
             <Menu styles={styles}>
-            <a id="home" className="menu-item" href="/">Home</a>
-            <a id="about" className="menu-item" href="/about">About</a>
-            <a id="contact" className="menu-item" href="/contact">Contact</a>
-            {/* Add other nav items here */}
+            <a  className="menu-item" href="/">Home</a>
+            <a  className="menu-item" href="/about">Work With Us</a>
+            <a  className="menu-item" href="/contact">Services</a>
+            <HashLink to='#contactBorder'>
+                <button className="butn vvd"><span>Let’s Connect</span></button>
+            </HashLink>
             </Menu>
           )}
           </div>

@@ -4,27 +4,50 @@ import Colors from "../../Colors";
 import Logo from "../Helper/images/victorvilleWebInnovationsLogo.png"
 import navItems from "../Helper/navigationItems";
 import { HashLink } from 'react-router-hash-link';
+import { slide as Menu } from 'react-burger-menu';
 
 const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('Home');
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
+      setScrolled(window.scrollY > 50);
+    };
+  
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+  
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [])
+    window.addEventListener("resize", checkMobile);
+  
+    // Initialize isMobile on mount
+    checkMobile();
+  
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
 
   const onUpdateActiveLink = (value) => {
     console.log("onUpdateActiveLink:", value)
     setActiveLink(value);
+  }
+
+  var styles = {
+    bmBurgerButton: {
+      position: 'fixed',
+      width: '36px',
+      height: '15px',
+      right: '36px',
+      top: '36px',
+      backgroundColor: Colors.darkBlue
+    }
   }
 
   return (
@@ -61,7 +84,7 @@ const NavBar = () => {
                     </div>
           </div>
           <div className="col-9">
-            <ul className="navButton">
+            <ul className={isMobile? "d-none" : "navButton"}>
               {navItems.slice(3).map((item) => (
                 <li key={item.id}>
                   <NavButton
@@ -77,6 +100,14 @@ const NavBar = () => {
                 <button className="butn vvd"><span>Let’s Connect</span></button>
               </HashLink>
             </ul>
+          {isMobile && (
+            <Menu styles={styles}>
+            <a id="home" className="menu-item" href="/">Home</a>
+            <a id="about" className="menu-item" href="/about">About</a>
+            <a id="contact" className="menu-item" href="/contact">Contact</a>
+            {/* Add other nav items here */}
+            </Menu>
+          )}
           </div>
         </div>
       </div>

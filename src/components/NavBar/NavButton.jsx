@@ -10,7 +10,6 @@ import React from "react";
     <a
       href={href}
       style={{ cursor: "pointer" }}
-      data-toggle="tooltip"
       // title={text}
       // target={isExternal ? "_blank" : "_self"}
       // rel={isExternal ? "noopener noreferrer" : ""}

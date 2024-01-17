@@ -6,6 +6,7 @@ import navItems from "../Helper/navigationItems";
 import { HashLink } from 'react-router-hash-link';
 import { slide as Menu } from 'react-burger-menu';
 import Hamburger from "../Helper/images/hamburgerWhite.png"
+import Close from "../Helper/images/close.png";
 
 const NavBar = () => {
 
@@ -40,6 +41,10 @@ const NavBar = () => {
     setActiveLink(value);
   }
 
+  const handleStateChange = (state) => {
+    setMenuOpen(state.isOpen);
+  };
+
   var styles = {
     bmBurgerButton: {
       position: 'fixed',
@@ -47,7 +52,7 @@ const NavBar = () => {
       height: '30px',
       right: '15px',
       top: '15px',
-      backgroundImage: `url(${Hamburger})`,
+      backgroundImage: `url(${menuOpen ? Close : Hamburger})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       zIndex: 100
@@ -105,10 +110,11 @@ const NavBar = () => {
               </HashLink>
             </ul>
           {isMobile && (
-            <Menu styles={styles}>
-            <a  className="menu-item" href="/">Home</a>
-            <a  className="menu-item" href="/about">Work With Us</a>
-            <a  className="menu-item" href="/contact">Services</a>
+            <Menu styles={styles}  onStateChange={handleStateChange}>
+              {navItems.slice(3).map((item) => (
+                <a  className="menu-item" href={item.href} id={item.id}>{item.title}</a>
+
+               ))}
             <HashLink to='#contactBorder'>
                 <button className="butn vvd"><span>Let’s Connect</span></button>
             </HashLink>
